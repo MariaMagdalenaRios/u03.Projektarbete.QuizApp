@@ -1,0 +1,152 @@
+[
+  {
+    "question": "What is the correct way to declare a variable in JavaScript?",
+    "choices": ["var x = 10;", "int x = 10;", "let x := 10;"],
+    "answer": "var x = 10;"
+  },
+  {
+    "question": "Which symbol is used for single-line comments in JavaScript?",
+    "choices": ["//", "#", "<!-- -->"],
+    "answer": "//"
+  },
+  {
+    "question": "What does 'DOM' stand for?",
+    "choices": ["Document Object Model", "Data Object Management", "Digital Ordinance Model"],
+    "answer": "Document Object Model"
+  },
+  {
+    "question": "Which keyword creates a constant in JavaScript?",
+    "choices": ["let", "var", "const"],
+    "answer": "const"
+  },
+  {
+    "question": "Which method converts JSON to a JavaScript object?",
+    "choices": ["JSON.parse()", "JSON.stringify()", "JSON.objectify()"],
+    "answer": "JSON.parse()"
+  },
+  {
+    "question": "What is the output of typeof null?",
+    "choices": ["object", "null", "undefined"],
+    "answer": "object"
+  },
+  {
+    "question": "How do you write an arrow function?",
+    "choices": ["function => () {}", "() => {}", "(=>) function() {}"],
+    "answer": "() => {}"
+  },
+  {
+    "question": "Which operator is used for strict equality?",
+    "choices": ["==", "===", "="],
+    "answer": "==="
+  },
+  {
+    "question": "How do you create an array in JavaScript?",
+    "choices": ["let arr = [];", "let arr = {};", "let arr = ();"],
+    "answer": "let arr = [];"
+  },
+  {
+    "question": "Which company developed JavaScript?",
+    "choices": ["Netscape", "Microsoft", "Sun Microsystems"],
+    "answer": "Netscape"
+  },
+  {
+    "question": "What is the default value of an uninitialized variable?",
+    "choices": ["null", "undefined", "0"],
+    "answer": "undefined"
+  },
+  {
+    "question": "Which statement stops a loop in JavaScript?",
+    "choices": ["break", "exit", "stop"],
+    "answer": "break"
+  },
+  {
+    "question": "Which function displays an alert box?",
+    "choices": ["alert()", "prompt()", "confirm()"],
+    "answer": "alert()"
+  },
+  {
+    "question": "How can you add a comment in JavaScript?",
+    "choices": ["<!-- comment -->", "// comment", "** comment **"],
+    "answer": "// comment"
+  },
+  {
+    "question": "Which method adds a new element to an array?",
+    "choices": ["push()", "append()", "add()"],
+    "answer": "push()"
+  },
+  {
+    "question": "Which statement is used for decisions?",
+    "choices": ["if", "switch", "both"],
+    "answer": "both"
+  },
+  {
+    "question": "What is NaN in JavaScript?",
+    "choices": ["Not a Name", "Not a Number", "No Assigned Number"],
+    "answer": "Not a Number"
+  },
+  {
+    "question": "Which loop executes at least once even if the condition is false?",
+    "choices": ["for", "while", "do...while"],
+    "answer": "do...while"
+  },
+  {
+    "question": "How do you round 4.7 down to 4?",
+    "choices": ["Math.floor(4.7)", "Math.round(4.7)", "Math.min(4.7)"],
+    "answer": "Math.floor(4.7)"
+  },
+  {
+    "question": "Which HTML tag includes JavaScript code?",
+    "choices": ["<js>", "<script>", "<javascript>"],
+    "answer": "<script>"
+  },
+  {
+    "question": "How do you check the length of an array?",
+    "choices": ["array.count", "array.size", "array.length"],
+    "answer": "array.length"
+  },
+  {
+    "question": "Which keyword defines a function?",
+    "choices": ["def", "func", "function"],
+    "answer": "function"
+  },
+  {
+    "question": "Which symbol represents OR in JavaScript?",
+    "choices": ["&&", "||", "??"],
+    "answer": "||"
+  },
+  {
+    "question": "What will '2' + 2 return?",
+    "choices": ["4", "22", "Error"],
+    "answer": "22"
+  },
+  {
+    "question": "How can you convert a string to an integer?",
+    "choices": ["Number()", "parseInt()", "toInt()"],
+    "answer": "parseInt()"
+  },
+  {
+    "question": "What does === check in JavaScript?",
+    "choices": ["Value only", "Type only", "Value and type"],
+    "answer": "Value and type"
+  },
+  {
+    "question": "Which keyword is used to import modules in ES6?",
+    "choices": ["require", "import", "include"],
+    "answer": "import"
+  },
+  {
+    "question": "How do you declare an asynchronous function?",
+    "choices": ["function async()", "async function()", "function() async"],
+    "answer": "async function()"
+  },
+  {
+    "question": "Which function is used to print to the console?",
+    "choices": ["console.print()", "console.log()", "print()"],
+    "answer": "console.log()"
+  },
+  {
+    "question": "What is used to handle exceptions in JavaScript?",
+    "choices": ["catch/try", "try/catch", "error()"],
+    "answer": "try/catch"
+  }
+]
