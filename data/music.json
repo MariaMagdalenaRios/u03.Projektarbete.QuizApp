@@ -1,956 +1,151 @@
 {
-  "music_quiz": [
-    {
-      "emoji": {
-        "question": "🍻👦➡️👧❤️",
-        "options": ["Shape of You", "Sugar", "Fall For Me"],
-        "answer": "Shape of You"
-      },
-      "lyric": {
-        "question": "I'm in love with the shape of you.",
-        "options": ["Shape of You", "Thinking Out Loud", "One More Night"],
-        "answer": "Shape of You"
-      },
-      "clue": {
-        "question": "2017 pop hit about falling for someone’s body and charm.",
-        "options": ["Shape of You", "Bad Habits", "Hold Me Closer"],
-        "answer": "Shape of You"
-      }
-    },
-    {
-      "emoji": {
-        "question": "🎂🎶🎸",
-        "options": ["Happy Birthday", "Birthday", "In Da Club"],
-        "answer": "Birthday"
-      },
-      "lyric": {
-        "question": "So shine a light and make it feel like home.",
-        "options": ["Birthday", "Cake by the Ocean", "Happy Birthday"],
-        "answer": "Birthday"
-      },
-      "clue": {
-        "question": "A 2014 pop song by Katy Perry about celebrating.",
-        "options": ["Birthday", "Roar", "Firework"],
-        "answer": "Birthday"
-      }
-    },
-    {
-      "emoji": {
-        "question": "🌧️👩‍❤️‍👨🚶‍♂️🚶‍♀️",
-        "options": ["Someone Like You", "Set Fire to the Rain", "Rolling in the Deep"],
-        "answer": "Set Fire to the Rain"
-      },
-      "lyric": {
-        "question": "I set fire to the rain, watched it pour as I touched your face.",
-        "options": ["Set Fire to the Rain", "Chasing Pavements", "Hello"],
-        "answer": "Set Fire to the Rain"
-      },
-      "clue": {
-        "question": "A soulful 2011 ballad where the singer describes impossible love.",
-        "options": ["Someone Like You", "Set Fire to the Rain", "Make You Feel My Love"],
-        "answer": "Set Fire to the Rain"
-      }
-    },
-    {
-      "emoji": {
-        "question": "👑👩‍🎤🔥",
-        "options": ["Queen", "We Will Rock You", "Killer Queen"],
-        "answer": "Killer Queen"
-      },
-      "lyric": {
-        "question": "She's a Killer Queen, gunpowder, gelatine.",
-        "options": ["Killer Queen", "Bohemian Rhapsody", "Somebody to Love"],
-        "answer": "Killer Queen"
-      },
-      "clue": {
-        "question": "1974 Queen classic describing a high-class femme fatale.",
-        "options": ["Killer Queen", "Don't Stop Me Now", "Bohemian Rhapsody"],
-        "answer": "Killer Queen"
-      }
-    },
-    {
-      "emoji": {
-        "question": "🏠🔚👨‍👩‍👧",
-        "options": ["Home", "Take Me Home, Country Roads", "Sweet Home Alabama"],
-        "answer": "Take Me Home, Country Roads"
-      },
-      "lyric": {
-        "question": "Country roads, take me home to the place I belong.",
-        "options": ["Take Me Home, Country Roads", "Homeward Bound", "Sweet Home Alabama"],
-        "answer": "Take Me Home, Country Roads"
-      },
-      "clue": {
-        "question": "1971 John Denver song about longing for home and West Virginia.",
-        "options": ["Take Me Home, Country Roads", "Rocky Mountain High", "Annie's Song"],
-        "answer": "Take Me Home, Country Roads"
-      }
-    },
-    {
-      "emoji": {
-        "question": "👩‍🎤💔🕺",
-        "options": ["Dancing On My Own", "Call Me Maybe", "Can't Feel My Face"],
-        "answer": "Dancing On My Own"
-      },
-      "lyric": {
-        "question": "I'm in the corner, watching you kiss her, oh.",
-        "options": ["Dancing On My Own", "Chasing Cars", "Bleeding Love"],
-        "answer": "Dancing On My Own"
-      },
-      "clue": {
-        "question": "Robyn’s 2010 heartbreak-dance anthem about watching an ex with someone new.",
-        "options": ["Dancing On My Own", "With Every Heartbeat", "Be Mine!"],
-        "answer": "Dancing On My Own"
-      }
-    },
-    {
-      "emoji": {
-        "question": "🌕👨‍🚀🎶",
-        "options": ["Space Oddity", "Rocket Man", "Starman"],
-        "answer": "Space Oddity"
-      },
-      "lyric": {
-        "question": "This is Ground Control to Major Tom.",
-        "options": ["Space Oddity", "Major Tom (Coming Home)", "Rocket Man"],
-        "answer": "Space Oddity"
-      },
-      "clue": {
-        "question": "David Bowie 1969 song about an astronaut’s journey.",
-        "options": ["Space Oddity", "Life on Mars?", "Starman"],
-        "answer": "Space Oddity"
-      }
-    },
-    {
-      "emoji": {
-        "question": "🎧😴🌙",
-        "options": ["Fly Me to the Moon", "Moondance", "Night Changes"],
-        "answer": "Fly Me to the Moon"
-      },
-      "lyric": {
-        "question": "Fly me to the moon, let me play among the stars.",
-        "options": ["Fly Me to the Moon", "Beyond the Sea", "Blue Moon"],
-        "answer": "Fly Me to the Moon"
-      },
-      "clue": {
-        "question": "Classic jazz standard famously sung by Frank Sinatra.",
-        "options": ["Fly Me to the Moon", "The Way You Look Tonight", "That's Amore"],
-        "answer": "Fly Me to the Moon"
-      }
-    },
-    {
-      "emoji": {
-        "question": "🚗💨🎶",
-        "options": ["Drive", "Fast Car", "Ride"],
-        "answer": "Fast Car"
-      },
-      "lyric": {
-        "question": "You got a fast car, I want a ticket to anywhere.",
-        "options": ["Fast Car", "Carolina in My Mind", "Little Red Corvette"],
-        "answer": "Fast Car"
-      },
-      "clue": {
-        "question": "Tracy Chapman’s 1988 storytelling song about escape and hope.",
-        "options": ["Fast Car", "Give Me One Reason", "Talkin' 'bout a Revolution"],
-        "answer": "Fast Car"
-      }
-    },
-    {
-      "emoji": {
-        "question": "👶🎵👩‍❤️‍👨",
-        "options": ["Isn't She Lovely", "Brown Eyed Girl", "Hey Jude"],
-        "answer": "Isn't She Lovely"
-      },
-      "lyric": {
-        "question": "Isn't she lovely, isn't she wonderful.",
-        "options": ["Isn't She Lovely", "Wonderful Tonight", "Lovely Day"],
-        "answer": "Isn't She Lovely"
-      },
-      "clue": {
-        "question": "Stevie Wonder song celebrating his newborn daughter.",
-        "options": ["Isn't She Lovely", "Signed, Sealed, Delivered", "My Cherie Amour"],
-        "answer": "Isn't She Lovely"
-      }
-    },
-    {
-      "emoji": {
-        "question": "🎸🤘🔥",
-        "options": ["Smells Like Teen Spirit", "Enter Sandman", "Back in Black"],
-        "answer": "Smells Like Teen Spirit"
-      },
-      "lyric": {
-        "question": "With the lights out, it's less dangerous; here we are now, entertain us.",
-        "options": ["Smells Like Teen Spirit", "Come As You Are", "Lithium"],
-        "answer": "Smells Like Teen Spirit"
-      },
-      "clue": {
-        "question": "Nirvana’s 1991 grunge anthem that defined a generation.",
-        "options": ["Smells Like Teen Spirit", "Heart-Shaped Box", "In Bloom"],
-        "answer": "Smells Like Teen Spirit"
-      }
-    },
-    {
-      "emoji": {
-        "question": "🎹💔🌧️",
-        "options": ["Someone Like You", "Rolling in the Deep", "Hello"],
-        "answer": "Someone Like You"
-      },
-      "lyric": {
-        "question": "Never mind, I'll find someone like you.",
-        "options": ["Someone Like You", "Set Fire to the Rain", "When We Were Young"],
-        "answer": "Someone Like You"
-      },
-      "clue": {
-        "question": "Adele’s poignant ballad about accepting a past relationship.",
-        "options": ["Someone Like You", "Skyfall", "Turning Tables"],
-        "answer": "Someone Like You"
-      }
-    },
-    {
-      "emoji": {
-        "question": "🕺✨💃",
-        "options": ["Uptown Funk", "Get Lucky", "Can't Stop the Feeling!"],
-        "answer": "Uptown Funk"
-      },
-      "lyric": {
-        "question": "This hit's too hot (hot damn), call the police and the fireman.",
-        "options": ["Uptown Funk", "Blurred Lines", "Happy"],
-        "answer": "Uptown Funk"
-      },
-      "clue": {
-        "question": "Mark Ronson ft. Bruno Mars 2014 funky party anthem.",
-        "options": ["Uptown Funk", "Treasure", "24K Magic"],
-        "answer": "Uptown Funk"
-      }
-    },
-    {
-      "emoji": {
-        "question": "🎸👨‍🎤🇬🇧",
-        "options": ["Wonderwall", "Don't Look Back in Anger", "Champagne Supernova"],
-        "answer": "Wonderwall"
-      },
-      "lyric": {
-        "question": "Because maybe, you're gonna be the one that saves me.",
-        "options": ["Wonderwall", "Slide Away", "Live Forever"],
-        "answer": "Wonderwall"
-      },
-      "clue": {
-        "question": "1995 Oasis hit often sung at singalongs.",
-        "options": ["Wonderwall", "Don't Look Back in Anger", "Roll With It"],
-        "answer": "Wonderwall"
-      }
-    },
-    {
-      "emoji": {
-        "question": "🎷🌃💑",
-        "options": ["Careless Whisper", "Smooth Operator", "Just the Two of Us"],
-        "answer": "Careless Whisper"
-      },
-      "lyric": {
-        "question": "Guilty feet have got no rhythm.",
-        "options": ["Careless Whisper", "Every Breath You Take", "Time After Time"],
-        "answer": "Careless Whisper"
-      },
-      "clue": {
-        "question": "George Michael’s 1984 song known for its saxophone riff.",
-        "options": ["Careless Whisper", "Faith", "Wake Me Up Before You Go-Go"],
-        "answer": "Careless Whisper"
-      }
-    },
-    {
-      "emoji": {
-        "question": "🎵🚪🔚",
-        "options": ["Close To You", "So Close", "Hello"],
-        "answer": "Hello"
-      },
-      "lyric": {
-        "question": "Hello from the other side. I must've called a thousand times.",
-        "options": ["Hello", "Someone Like You", "Rolling in the Deep"],
-        "answer": "Hello"
-      },
-      "clue": {
-        "question": "Adele’s powerful comeback single released in 2015.",
-        "options": ["Hello", "Skyfall", "Set Fire to the Rain"],
-        "answer": "Hello"
-      }
-    },
-    {
-      "emoji": {
-        "question": "🏝️☀️👙",
-        "options": ["Island in the Sun", "Kokomo", "Summer of '69"],
-        "answer": "Island in the Sun"
-      },
-      "lyric": {
-        "question": "On an island in the sun, we'll be playing and having fun.",
-        "options": ["Island in the Sun", "Kokomo", "Three Little Birds"],
-        "answer": "Island in the Sun"
-      },
-      "clue": {
-        "question": "Weezer 2001 mellow track about escaping to a tropical place.",
-        "options": ["Island in the Sun", "Buddy Holly", "Say It Ain't So"],
-        "answer": "Island in the Sun"
-      }
-    },
-    {
-      "emoji": {
-        "question": "🎤🔫💔",
-        "options": ["Pumped Up Kicks", "Mr. Brightside", "Somebody Told Me"],
-        "answer": "Pumped Up Kicks"
-      },
-      "lyric": {
-        "question": "All the other kids with the pumped up kicks, you'd better run, better run, outrun my gun.",
-        "options": ["Pumped Up Kicks", "Kids", "Young Folks"],
-        "answer": "Pumped Up Kicks"
-      },
-      "clue": {
-        "question": "Indie pop song with a contrast between upbeat sound and dark lyrics.",
-        "options": ["Pumped Up Kicks", "Electric Feel", "Take Me Out"],
-        "answer": "Pumped Up Kicks"
-      }
-    },
-    {
-      "emoji": {
-        "question": "🛣️🎸🎤",
-        "options": ["Born to Run", "Highway to Hell", "Life is a Highway"],
-        "answer": "Born to Run"
-      },
-      "lyric": {
-        "question": "Tramps like us, baby we were born to run.",
-        "options": ["Born to Run", "Thunder Road", "Dancing in the Dark"],
-        "answer": "Born to Run"
-      },
-      "clue": {
-        "question": "Bruce Springsteen epic about escape and young dreams.",
-        "options": ["Born to Run", "Glory Days", "Badlands"],
-        "answer": "Born to Run"
-      }
-    },
-    {
-      "emoji": {
-        "question": "🎤💡🚨",
-        "options": ["Blinding Lights", "Save Your Tears", "In the Night"],
-        "answer": "Blinding Lights"
-      },
-      "lyric": {
-        "question": "I said, ooh, I'm blinded by the lights.",
-        "options": ["Blinding Lights", "Can't Feel My Face", "The Hills"],
-        "answer": "Blinding Lights"
-      },
-      "clue": {
-        "question": "80s-inspired pop hit by The Weeknd from 2019/2020.",
-        "options": ["Blinding Lights", "Starboy", "Call Out My Name"],
-        "answer": "Blinding Lights"
-      }
-    },
-    {
-      "emoji": {
-        "question": "🎻🇮🇹🎶",
-        "options": ["Con te partirò", "Time to Say Goodbye", "Nessun Dorma"],
-        "answer": "Con te partirò"
-      },
-      "lyric": {
-        "question": "When I am alone I sit and dream and when I dream the words are missing.",
-        "options": ["Con te partirò", "Caruso", "O Sole Mio"],
-        "answer": "Con te partirò"
-      },
-      "clue": {
-        "question": "Andrea Bocelli’s famous classical crossover ballad also known as 'Time to Say Goodbye'.",
-        "options": ["Con te partirò", "The Prayer", "Sognami"],
-        "answer": "Con te partirò"
-      }
-    },
-    {
-      "emoji": {
-        "question": "🕺🎩💃",
-        "options": ["Happy", "Can't Stop the Feeling!", "Uptown Funk"],
-        "answer": "Can't Stop the Feeling!"
-      },
-      "lyric": {
-        "question": "I got that sunshine in my pocket, got that good song in my feet.",
-        "options": ["Can't Stop the Feeling!", "Happy", "Shut Up and Dance"],
-        "answer": "Can't Stop the Feeling!"
-      },
-      "clue": {
-        "question": "Justin Timberlake upbeat song from the Trolls soundtrack (2016).",
-        "options": ["Can't Stop the Feeling!", "Mirrors", "Suit & Tie"],
-        "answer": "Can't Stop the Feeling!"
-      }
-    },
-    {
-      "emoji": {
-        "question": "🎮👦🏽💔",
-        "options": ["Waiting for Love", "Heroes", "Adventure of a Lifetime"],
-        "answer": "Adventure of a Lifetime"
-      },
-      "lyric": {
-        "question": "Turn your magic on, to me she'd say, everything you want's a dream away.",
-        "options": ["Adventure of a Lifetime", "Viva La Vida", "Paradise"],
-        "answer": "Adventure of a Lifetime"
-      },
-      "clue": {
-        "question": "Coldplay upbeat track with a funky groove from 2015.",
-        "options": ["Adventure of a Lifetime", "Hymn for the Weekend", "A Sky Full of Stars"],
-        "answer": "Adventure of a Lifetime"
-      }
-    },
-    {
-      "emoji": {
-        "question": "🌊🏝️🎸",
-        "options": ["Under the Bridge", "Ocean Eyes", "Under the Sea"],
-        "answer": "Under the Bridge"
-      },
-      "lyric": {
-        "question": "Sometimes I feel like I don't have a partner, sometimes I feel like my only friend.",
-        "options": ["Under the Bridge", "Californication", "Scar Tissue"],
-        "answer": "Under the Bridge"
-      },
-      "clue": {
-        "question": "Red Hot Chili Peppers song about loneliness and feeling disconnected.",
-        "options": ["Under the Bridge", "By the Way", "Dani California"],
-        "answer": "Under the Bridge"
-      }
-    },
-    {
-      "emoji": {
-        "question": "👑🎵🇺🇸",
-        "options": ["My Girl", "Stand by Me", "When a Man Loves a Woman"],
-        "answer": "Stand by Me"
-      },
-      "lyric": {
-        "question": "When the night has come and the land is dark, and the moon is the only light we'll see.",
-        "options": ["Stand by Me", "Lean on Me", "You've Got a Friend"],
-        "answer": "Stand by Me"
-      },
-      "clue": {
-        "question": "Ben E. King classic about loyalty and support.",
-        "options": ["Stand by Me", "Unchained Melody", "I Will Always Love You"],
-        "answer": "Stand by Me"
-      }
-    },
-    {
-      "emoji": {
-        "question": "💃🌹💔",
-        "options": ["La Vida Loca", "Livin' la Vida Loca", "Despacito"],
-        "answer": "Livin' la Vida Loca"
-      },
-      "lyric": {
-        "question": "She's into superstition, black cat bones and voodoo dolls.",
-        "options": ["Livin' la Vida Loca", "Livin' on a Prayer", "Smooth"],
-        "answer": "Livin' la Vida Loca"
-      },
-      "clue": {
-        "question": "Ricky Martin’s 1999 breakout Latin pop hit.",
-        "options": ["Livin' la Vida Loca", "María", "She Bangs"],
-        "answer": "Livin' la Vida Loca"
-      }
-    },
-    {
-      "emoji": {
-        "question": "🎧🏙️✨",
-        "options": ["Empire State of Mind", "New York, New York", "Welcome to New York"],
-        "answer": "Empire State of Mind"
-      },
-      "lyric": {
-        "question": "Concrete jungle where dreams are made of, there's nothing you can't do.",
-        "options": ["Empire State of Mind", "New York State of Mind", "Welcome to New York"],
-        "answer": "Empire State of Mind"
-      },
-      "clue": {
-        "question": "Jay-Z and Alicia Keys anthem celebrating New York City.",
-        "options": ["Empire State of Mind", "N.Y. State of Mind", "No Sleep till Brooklyn"],
-        "answer": "Empire State of Mind"
-      }
-    },
-    {
-      "emoji": {
-        "question": "🏰🎶😢",
-        "options": ["My Heart Will Go On", "Unchained Melody", "I Will Always Love You"],
-        "answer": "My Heart Will Go On"
-      },
-      "lyric": {
-        "question": "Near, far, wherever you are, I believe that the heart does go on.",
-        "options": ["My Heart Will Go On", "Because You Loved Me", "All By Myself"],
-        "answer": "My Heart Will Go On"
-      },
-      "clue": {
-        "question": "Celine Dion ballad from the movie Titanic.",
-        "options": ["My Heart Will Go On", "The Power of Love", "It's All Coming Back to Me Now"],
-        "answer": "My Heart Will Go On"
-      }
-    },
-    {
-      "emoji": {
-        "question": "🎹🌧️🇬🇧",
-        "options": ["Clocks", "The Scientist", "Fix You"],
-        "answer": "Clocks"
-      },
-      "lyric": {
-        "question": "You are, you are, you are, you are, whoa.",
-        "options": ["Clocks", "Speed of Sound", "Viva La Vida"],
-        "answer": "Clocks"
-      },
-      "clue": {
-        "question": "Coldplay piano riff-driven track released in 2002.",
-        "options": ["Clocks", "The Scientist", "Yellow"],
-        "answer": "Clocks"
-      }
-    },
-    {
-      "emoji": {
-        "question": "🎶💔🏙️",
-        "options": ["Tears in Heaven", "Everybody Hurts", "With or Without You"],
-        "answer": "Everybody Hurts"
-      },
-      "lyric": {
-        "question": "Everybody hurts sometimes, everyone cries, everyone hurts.",
-        "options": ["Everybody Hurts", "Fix You", "Nothing Compares 2 U"],
-        "answer": "Everybody Hurts"
-      },
-      "clue": {
-        "question": "R.E.M. song offering comfort in hard times.",
-        "options": ["Everybody Hurts", "Losing My Religion", "Man on the Moon"],
-        "answer": "Everybody Hurts"
-      }
-    },
-    {
-      "emoji": {
-        "question": "🎸🥁⚡",
-        "options": ["Back in Black", "Thunderstruck", "Highway to Hell"],
-        "answer": "Thunderstruck"
-      },
-      "lyric": {
-        "question": "Thunderstruck! (you're thunderstruck).",
-        "options": ["Thunderstruck", "Back in Black", "You Shook Me All Night Long"],
-        "answer": "Thunderstruck"
-      },
-      "clue": {
-        "question": "AC/DC high-energy rock anthem with a signature guitar riff.",
-        "options": ["Thunderstruck", "Hells Bells", "Shoot to Thrill"],
-        "answer": "Thunderstruck"
-      }
-    },
-    {
-      "emoji": {
-        "question": "🕰️🧭🎼",
-        "options": ["Time", "Comfortably Numb", "Wish You Were Here"],
-        "answer": "Time"
-      },
-      "lyric": {
-        "question": "And you run and you run to catch up with the sun but it's sinking.",
-        "options": ["Time", "Money", "Shine On You Crazy Diamond"],
-        "answer": "Time"
-      },
-      "clue": {
-        "question": "Pink Floyd track reflecting on passing years and regret.",
-        "options": ["Time", "Us and Them", "Breathe"],
-        "answer": "Time"
-      }
-    },
-    {
-      "emoji": {
-        "question": "🎤🇺🇸🏆",
-        "options": ["Born in the U.S.A.", "Fortunate Son", "American Woman"],
-        "answer": "Born in the U.S.A."
-      },
-      "lyric": {
-        "question": "Born in the U.S.A. I was born in the U.S.A.",
-        "options": ["Born in the U.S.A.", "Glory Days", "Dancing in the Dark"],
-        "answer": "Born in the U.S.A."
-      },
-      "clue": {
-        "question": "Bruce Springsteen stadium-rock anthem often misunderstood as patriotic.",
-        "options": ["Born in the U.S.A.", "The River", "I'm on Fire"],
-        "answer": "Born in the U.S.A."
-      }
-    },
-    {
-      "emoji": {
-        "question": "🎤👑💃",
-        "options": ["Billie Jean", "Thriller", "Beat It"],
-        "answer": "Billie Jean"
-      },
-      "lyric": {
-        "question": "She was more like a beauty queen from a movie scene.",
-        "options": ["Billie Jean", "Smooth Criminal", "Bad"],
-        "answer": "Billie Jean"
-      },
-      "clue": {
-        "question": "Michael Jackson’s 1982 hit with an unforgettable bassline.",
-        "options": ["Billie Jean", "Thriller", "Man in the Mirror"],
-        "answer": "Billie Jean"
-      }
-    },
-    {
-      "emoji": {
-        "question": "🎸🕶️😎",
-        "options": ["Sweet Child o' Mine", "November Rain", "Paradise City"],
-        "answer": "Sweet Child o' Mine"
-      },
-      "lyric": {
-        "question": "She's got eyes of the bluest skies as if they thought of rain.",
-        "options": ["Sweet Child o' Mine", "Patience", "Estranged"],
-        "answer": "Sweet Child o' Mine"
-      },
-      "clue": {
-        "question": "Guns N' Roses power ballad with a famous opening guitar riff.",
-        "options": ["Sweet Child o' Mine", "Welcome to the Jungle", "Don't Cry"],
-        "answer": "Sweet Child o' Mine"
-      }
-    },
-    {
-      "emoji": {
-        "question": "🎧❤️🌃",
-        "options": ["Thinking Out Loud", "Perfect", "Photograph"],
-        "answer": "Thinking Out Loud"
-      },
-      "lyric": {
-        "question": "Take me into your loving arms, kiss me under the light of a thousand stars.",
-        "options": ["Thinking Out Loud", "Perfect", "All of Me"],
-        "answer": "Thinking Out Loud"
-      },
-      "clue": {
-        "question": "Ed Sheeran romantic ballad often chosen for weddings.",
-        "options": ["Thinking Out Loud", "Shape of You", "Photograph"],
-        "answer": "Thinking Out Loud"
-      }
-    },
-    {
-      "emoji": {
-        "question": "🎤🇺🇸❤️",
-        "options": ["I Will Always Love You", "Endless Love", "Un-break My Heart"],
-        "answer": "I Will Always Love You"
-      },
-      "lyric": {
-        "question": "And I will always love you.",
-        "options": ["I Will Always Love You", "My Heart Will Go On", "Because You Loved Me"],
-        "answer": "I Will Always Love You"
-      },
-      "clue": {
-        "question": "Whitney Houston powerhouse ballad originally by Dolly Parton.",
-        "options": ["I Will Always Love You", "I Have Nothing", "Greatest Love of All"],
-        "answer": "I Will Always Love You"
-      }
-    },
-    {
-      "emoji": {
-        "question": "🎸🎤🇬🇧",
-        "options": ["Paint It Black", "Satisfaction", "Angie"],
-        "answer": "Paint It Black"
-      },
-      "lyric": {
-        "question": "I see a red door and I want it painted black.",
-        "options": ["Paint It Black", "Gimme Shelter", "Sympathy for the Devil"],
-        "answer": "Paint It Black"
-      },
-      "clue": {
-        "question": "Rolling Stones song with a dark sitar-tinged sound.",
-        "options": ["Paint It Black", "Jumpin' Jack Flash", "Ruby Tuesday"],
-        "answer": "Paint It Black"
-      }
-    },
-    {
-      "emoji": {
-        "question": "🎶🎬🕺",
-        "options": ["Footloose", "Grease", "Flashdance... What a Feeling"],
-        "answer": "Footloose"
-      },
-      "lyric": {
-        "question": "Kick off your Sunday shoes. Please, Louise, pull me off of my knees.",
-        "options": ["Footloose", "Let's Hear It for the Boy", "Maniac"],
-        "answer": "Footloose"
-      },
-      "clue": {
-        "question": "Kenny Loggins upbeat 1984 soundtrack hit about dancing and freedom.",
-        "options": ["Footloose", "Danger Zone", "I'm Alright"],
-        "answer": "Footloose"
-      }
-    },
-    {
-      "emoji": {
-        "question": "🎤🤠🎻",
-        "options": ["Jolene", "Ring of Fire", "Take Me Home, Country Roads"],
-        "answer": "Jolene"
-      },
-      "lyric": {
-        "question": "Jolene, Jolene, Jolene, Jolene, I'm begging of you please don't take my man.",
-        "options": ["Jolene", "Stand by Your Man", "9 to 5"],
-        "answer": "Jolene"
-      },
-      "clue": {
-        "question": "Dolly Parton’s plea to a woman named Jolene.",
-        "options": ["Jolene", "Coat of Many Colors", "I Will Always Love You"],
-        "answer": "Jolene"
-      }
-    },
-    {
-      "emoji": {
-        "question": "🎶🌅🚲",
-        "options": ["Here Comes the Sun", "Sunrise", "Good Day Sunshine"],
-        "answer": "Here Comes the Sun"
-      },
-      "lyric": {
-        "question": "Here comes the sun, and I say it's all right.",
-        "options": ["Here Comes the Sun", "Let It Be", "Octopus's Garden"],
-        "answer": "Here Comes the Sun"
-      },
-      "clue": {
-        "question": "George Harrison-penned Beatles sunshine classic.",
-        "options": ["Here Comes the Sun", "Across the Universe", "Blackbird"],
-        "answer": "Here Comes the Sun"
-      }
-    },
-    {
-      "emoji": {
-        "question": "🎸👨‍🎤🇬🇧",
-        "options": ["Rocket Man", "Space Oddity", "Starman"],
-        "answer": "Rocket Man"
-      },
-      "lyric": {
-        "question": "And I think it's gonna be a long long time 'til touchdown brings me 'round again to find I'm not the man they think I am at home.",
-        "options": ["Rocket Man", "Space Oddity", "Starman"],
-        "answer": "Rocket Man"
-      },
-      "clue": {
-        "question": "Elton John classic about the lonely life of an astronaut.",
-        "options": ["Rocket Man", "Tiny Dancer", "Your Song"],
-        "answer": "Rocket Man"
-      }
-    },
-    {
-      "emoji": {
-        "question": "🎤💫🌊",
-        "options": ["Hallelujah", "Amazing Grace", "Sound of Silence"],
-        "answer": "Hallelujah"
-      },
-      "lyric": {
-        "question": "And even though it all went wrong I'll stand before the Lord of Song with nothing on my tongue but Hallelujah.",
-        "options": ["Hallelujah", "The Sound of Silence", "Bridge Over Troubled Water"],
-        "answer": "Hallelujah"
-      },
-      "clue": {
-        "question": "Leonard Cohen song covered by many artists, known for haunting chorus.",
-        "options": ["Hallelujah", "Suzanne", "Famous Blue Raincoat"],
-        "answer": "Hallelujah"
-      }
-    },
-    {
-      "emoji": {
-        "question": "🎧💿🕺",
-        "options": ["Don't Stop Believin'", "Livin' on a Prayer", "Sweet Child o' Mine"],
-        "answer": "Don't Stop Believin'"
-      },
-      "lyric": {
-        "question": "Just a small town girl, living in a lonely world.",
-        "options": ["Don't Stop Believin'", "Eye of the Tiger", "Here I Go Again"],
-        "answer": "Don't Stop Believin'"
-      },
-      "clue": {
-        "question": "Journey arena-rock singalong staple from 1981.",
-        "options": ["Don't Stop Believin'", "Any Way You Want It", "Separate Ways"],
-        "answer": "Don't Stop Believin'"
-      }
-    },
-    {
-      "emoji": {
-        "question": "🎶🧊💃",
-        "options": ["Ice Ice Baby", "U Can't Touch This", "Gangsta's Paradise"],
-        "answer": "Ice Ice Baby"
-      },
-      "lyric": {
-        "question": "Ice ice baby, vanilla ice ice baby.",
-        "options": ["Ice Ice Baby", "Push It", "U Can't Touch This"],
-        "answer": "Ice Ice Baby"
-      },
-      "clue": {
-        "question": "Vanilla Ice 1990 rap hit sampling Queen & David Bowie.",
-        "options": ["Ice Ice Baby", "Ice Ice Baby (Remix)", "Rappers Delight"],
-        "answer": "Ice Ice Baby"
-      }
-    },
-    {
-      "emoji": {
-        "question": "🎤🎼🌈",
-        "options": ["Somewhere Over the Rainbow", "What a Wonderful World", "Rainbow Connection"],
-        "answer": "Somewhere Over the Rainbow"
-      },
-      "lyric": {
-        "question": "Somewhere over the rainbow, skies are blue, and the dreams that you dare to dream really do come true.",
-        "options": ["Somewhere Over the Rainbow", "Dream a Little Dream of Me", "Blue Skies"],
-        "answer": "Somewhere Over the Rainbow"
-      },
-      "clue": {
-        "question": "Iconic Judy Garland song from The Wizard of Oz.",
-        "options": ["Somewhere Over the Rainbow", "If I Only Had a Brain", "We're Off to See the Wizard"],
-        "answer": "Somewhere Over the Rainbow"
-      }
-    },
-    {
-      "emoji": {
-        "question": "🎹🎤🇺🇸",
-        "options": ["Piano Man", "Uptown Girl", "We Didn't Start the Fire"],
-        "answer": "Piano Man"
-      },
-      "lyric": {
-        "question": "Sing us a song, you're the piano man. Sing us a song tonight.",
-        "options": ["Piano Man", "Just the Way You Are", "Only the Good Die Young"],
-        "answer": "Piano Man"
-      },
-      "clue": {
-        "question": "Billy Joel’s storytelling song about barroom characters.",
-        "options": ["Piano Man", "New York State of Mind", "Vienna"],
-        "answer": "Piano Man"
-      }
-    },
-    {
-      "emoji": {
-        "question": "🎧🏡🌸",
-        "options": ["Home", "This Town", "Our House"],
-        "answer": "Our House"
-      },
-      "lyric": {
-        "question": "Our house, in the middle of our street.",
-        "options": ["Our House", "Mad World", "The Things We Do for Love"],
-        "answer": "Our House"
-      },
-      "clue": {
-        "question": "1980s Madness ska-pop song about family life.",
-        "options": ["Our House", "It Must Be Love", "Baggy Trousers"],
-        "answer": "Our House"
-      }
-    },
-    {
-      "emoji": {
-        "question": "🎤🔥💥",
-        "options": ["Rolling in the Deep", "Set Fire to the Rain", "Rumour Has It"],
-        "answer": "Rolling in the Deep"
-      },
-      "lyric": {
-        "question": "We could have had it all, rolling in the deep.",
-        "options": ["Rolling in the Deep", "Someone Like You", "Hello"],
-        "answer": "Rolling in the Deep"
-      },
-      "clue": {
-        "question": "Adele breakthrough single with powerful vocals and driving beat.",
-        "options": ["Rolling in the Deep", "Chasing Pavements", "Make You Feel My Love"],
-        "answer": "Rolling in the Deep"
-      }
-    },
-    {
-      "emoji": {
-        "question": "🎧🏝️🎶",
-        "options": ["Despacito", "Bailando", "Danza Kuduro"],
-        "answer": "Despacito"
-      },
-      "lyric": {
-        "question": "Despacito, quiero respirar tu cuello despacito.",
-        "options": ["Despacito", "Vivir Mi Vida", "La Bicicleta"],
-        "answer": "Despacito"
-      },
-      "clue": {
-        "question": "Luis Fonsi and Daddy Yankee global Latin pop hit remixed with Justin Bieber.",
-        "options": ["Despacito", "Danza Kuduro", "Bailando"],
-        "answer": "Despacito"
-      }
-    },
-    {
-      "emoji": {
-        "question": "🎸🏞️🌅",
-        "options": ["Hotel California", "Take It Easy", "Peaceful Easy Feeling"],
-        "answer": "Hotel California"
-      },
-      "lyric": {
-        "question": "Welcome to the Hotel California, such a lovely place.",
-        "options": ["Hotel California", "Life in the Fast Lane", "New Kid in Town"],
-        "answer": "Hotel California"
-      },
-      "clue": {
-        "question": "Eagles 1977 classic with mysterious lyrics about excess and entrapment.",
-        "options": ["Hotel California", "Tequila Sunrise", "Desperado"],
-        "answer": "Hotel California"
-      }
-    },
-    {
-      "emoji": {
-        "question": "🎤🌧️🎹",
-        "options": ["Someone You Loved", "Say You Won't Let Go", "When I Was Your Man"],
-        "answer": "Someone You Loved"
-      },
-      "lyric": {
-        "question": "Now the day bleeds into nightfall, and you're not here to get me through it all.",
-        "options": ["Someone You Loved", "Before You Go", "All of Me"],
-        "answer": "Someone You Loved"
-      },
-      "clue": {
-        "question": "Lewis Capaldi emotional ballad about loss and longing.",
-        "options": ["Someone You Loved", "Bruises", "Hold Me While You Wait"],
-        "answer": "Someone You Loved"
-      }
-    },
-    {
-      "emoji": {
-        "question": "🎧🎸🏁",
-        "options": ["We Are the Champions", "Bohemian Rhapsody", "We Will Rock You"],
-        "answer": "We Are the Champions"
-      },
-      "lyric": {
-        "question": "We are the champions, my friends, and we'll keep on fighting 'til the end.",
-        "options": ["We Are the Champions", "Don't Stop Me Now", "Somebody to Love"],
-        "answer": "We Are the Champions"
-      },
-      "clue": {
-        "question": "Queen anthem often played after sports victories.",
-        "options": ["We Are the Champions", "We Will Rock You", "Radio Ga Ga"],
-        "answer": "We Are the Champions"
-      }
-    },
-    {
-      "emoji": {
-        "question": "🎧🕺🌟",
-        "options": ["Levitating", "Don't Start Now", "Physical"],
-        "answer": "Don't Start Now"
-      },
-      "lyric": {
-        "question": "Don't show up, don't come out, don't start caring about me now.",
-        "options": ["Don't Start Now", "Break My Heart", "Levitating"],
-        "answer": "Don't Start Now"
-      },
-      "clue": {
-        "question": "Dua Lipa disco-pop hit about moving on and setting boundaries.",
-        "options": ["Don't Start Now", "New Rules", "Physical"],
-        "answer": "Don't Start Now"
-      }
-    },
-    {
-      "emoji": {
-        "question": "🎤🌪️🧑‍🌾",
-        "options": ["Wagon Wheel", "Take Me Home, Country Roads", "Ring of Fire"],
-        "answer": "Wagon Wheel"
-      },
-      "lyric": {
-        "question": "So rock me mama like a wagon wheel, rock me mama any way you feel.",
-        "options": ["Wagon Wheel", "Homeward Bound", "King of the Road"],
-        "answer": "Wagon Wheel"
-      },
-      "clue": {
-        "question": "Modern folk-country singalong popularized by Old Crow Medicine Show and Darius Rucker.",
-        "options": ["Wagon Wheel", "House of the Rising Sun", "Jolene"],
-        "answer": "Wagon Wheel"
-      }
-    },
-    {
-      "emoji": {
-        "question": "🎶🕊️🌾",
-        "options": ["What a Wonderful World", "Somewhere Over the Rainbow", "The Sound of Silence"],
-        "answer": "What a Wonderful World"
-      },
-      "lyric": {
-        "question": "I see trees of green, red roses too. I see them bloom for me and you.",
-        "options": ["What a Wonderful World", "Here Comes the Sun", "Wonderful Tonight"],
-        "answer": "What a Wonderful World"
-      },
-      "clue": {
-        "question": "Louis Armstrong classic appreciating simple beauty in the world.",
-        "options": ["What a Wonderful World", "La Vie en Rose", "Smile"],
-        "answer": "What a Wonderful World"
-      }
-    }
+  "emoji": [
+    {"question": "🍻👦➡️👧❤️", "alternatives": ["Fall For Me", "Shape of You", "Sugar"], "answer": 1},
+    {"question": "😈👦🕶️", "alternatives": ["Mean", "Dark Horse", "Bad Guy"], "answer": 2},
+    {"question": "🕺🎩💃✨", "alternatives": ["Funky Town", "Uptown Funk", "Levitating"], "answer": 1},
+    {"question": "💔🌊🔥", "alternatives": ["Someone Like You", "Rolling in the Deep", "Set Fire to the Rain"], "answer": 1},
+    {"question": "💃🎶🌀🚫😞", "alternatives": ["Happy", "Don't Start Now", "Shake It Off"], "answer": 2},
+    {"question": "🚗🌆✨👀", "alternatives": ["Can't Feel My Face", "Blinding Lights", "Levitating"], "answer": 1},
+    {"question": "😢💔👩‍🎤", "alternatives": ["All I Ask", "Someone Like You", "Hello"], "answer": 1},
+    {"question": "❄️👸🏻💨🎶", "alternatives": ["Into the Unknown", "Let It Go", "Do You Want to Build a Snowman?"], "answer": 1},
+    {"question": "👑🎤⚡💀👼", "alternatives": ["Somebody to Love", "Bohemian Rhapsody", "We Will Rock You"], "answer": 1},
+    {"question": "😀👏☀️🎩", "alternatives": ["Can't Stop the Feeling!", "Happy", "Good Feeling"], "answer": 1},
+    {"question": "🏨🌴🌅🎸", "alternatives": ["Take It Easy", "Life in the Fast Lane", "Hotel California"], "answer": 2},
+    {"question": "🧛‍♂️🌕🕺🧟‍♀️", "alternatives": ["Ghostbusters", "Monster Mash", "Thriller"], "answer": 2},
+    {"question": "👃🧒🔥🎸", "alternatives": ["Come As You Are", "Smells Like Teen Spirit", "Lithium"], "answer": 1},
+    {"question": "👋👦🎶❤️", "alternatives": ["Hey Jude", "Let It Be", "Yesterday"], "answer": 0},
+    {"question": "💍🚫👰‍♀️💃", "alternatives": ["Run the World", "Single Ladies", "Irreplaceable"], "answer": 1},
+    {"question": "🎆💥💃🌈", "alternatives": ["Roar", "Firework", "Teenage Dream"], "answer": 1},
+    {"question": "🧱🌄🎸", "alternatives": ["Don't Look Back in Anger", "Wonderwall", "Champagne Supernova"], "answer": 1},
+    {"question": "🕺🖤👶🚫", "alternatives": ["Thriller", "Beat It", "Billie Jean"], "answer": 2},
+    {"question": "🙏💪🎸❤️", "alternatives": ["You Give Love a Bad Name", "Livin' on a Prayer", "Wanted Dead or Alive"], "answer": 1},
+    {"question": "💧🎤🎬❤️", "alternatives": ["Always Remember Us This Way", "Shallow", "Is That Alright?"], "answer": 1},
+    {"question": "🕺💃💡🎶", "alternatives": ["Stayin’ Alive", "Night Fever", "You Should Be Dancing"], "answer": 0},
+    {"question": "💔🎭🔥🖤", "alternatives": ["Bad Romance", "Alejandro", "Poker Face"], "answer": 0},
+    {"question": "7️⃣⚔️🎸🏁", "alternatives": ["Fell in Love with a Girl", "Seven Nation Army", "Icky Thump"], "answer": 1},
+    {"question": "⭐🎤🕶️🏃‍♂️", "alternatives": ["Smells Like Teen Spirit", "Buddy Holly", "All Star"], "answer": 2},
+    {"question": "🌊💔🔥", "alternatives": ["Hello", "Rolling in the Deep", "Set Fire to the Rain"], "answer": 1},
+    {"question": "✋👁️🎶📺", "alternatives": ["The Sun Always Shines on T.V.", "Take On Me", "Hunting High and Low"], "answer": 1},
+    {"question": "🃏😐🎤🎶", "alternatives": ["Bad Romance", "Poker Face", "Just Dance"], "answer": 1},
+    {"question": "⭐📈💭🎶", "alternatives": ["Secrets", "Apologize", "Counting Stars"], "answer": 2},
+    {"question": "🐢🔥🌴💃", "alternatives": ["Vivir Mi Vida", "Despacito", "Bailando"], "answer": 1},
+    {"question": "😇💡❤️", "alternatives": ["Irreplaceable", "Halo", "Single Ladies"], "answer": 1},
+    {"question": "💞🌙💍🎶", "alternatives": ["Perfect", "Photograph", "Thinking Out Loud"], "answer": 0},
+    {"question": "⚽🌍💃🔥", "alternatives": ["La La La", "Hips Don't Lie", "Waka Waka (This Time for Africa)"], "answer": 2},
+    {"question": "☠️💋💃🍸", "alternatives": ["Gimme More", "Toxic", "Oops!... I Did It Again"], "answer": 1},
+    {"question": "🎤💪🍝🏆", "alternatives": ["Lose Yourself", "Not Afraid", "The Real Slim Shady"], "answer": 0},
+    {"question": "🦁💪🎶", "alternatives": ["Stronger", "Roar", "Firework"], "answer": 1},
+    {"question": "💡🍷😢🎶", "alternatives": ["Elastic Heart", "Chandelier", "Cheap Thrills"], "answer": 1},
+    {"question": "🌴💃🎺🇨🇺", "alternatives": ["Bailando", "Señorita", "Havana"], "answer": 2},
+    {"question": "🐎🤠🛣️🎶", "alternatives": ["The Git Up", "Old Town Road", "Country Roads"], "answer": 1},
+    {"question": "🌙😈🍷💋", "alternatives": ["Blinding Lights", "Bad Habits", "Shape of You"], "answer": 1},
+    {"question": "🐒💃🎶🙈", "alternatives": ["Riptide", "Dance Monkey", "Someone You Loved"], "answer": 1},
+    {"question": "🚉🌃❤️🎶", "alternatives": ["Don't Stop Believin'", "Eye of the Tiger", "We Built This City"], "answer": 0},
+    {"question": "🍉🍬🌞🎶", "alternatives": ["Sunflower", "Watermelon Sugar", "Juice"], "answer": 1},
+    {"question": "👑🎻🌧️🎶", "alternatives": ["Viva La Vida", "Clocks", "Paradise"], "answer": 0},
+    {"question": "😊👫🌈🎵", "alternatives": ["Surfin' USA", "Happy Together", "Good Vibrations"], "answer": 1},
+    {"question": "☢️🌅🎸💨", "alternatives": ["Radioactive", "Believer", "Demons"], "answer": 0},
+    {"question": "⏳👨‍🎤❤️", "alternatives": ["Watermelon Sugar", "As It Was", "Adore You"], "answer": 1},
+    {"question": "💐💃💔🌻", "alternatives": ["Wrecking Ball", "Flowers", "Midnight Sky"], "answer": 1}
+  ],
+
+  "lyrics": [
+    {"question": "I'm in love with the shape of you.", "alternatives": ["Shape of You", "Photograph", "Love Me Like You Do"], "answer": 0},
+    {"question": "So you're a tough guy, like it really rough guy.", "alternatives": ["Dark Horse", "Bad Guy", "Mean"], "answer": 1},
+    {"question": "Don't believe me, just watch!", "alternatives": ["Levitating", "Uptown Funk", "Funky Town"], "answer": 1},
+    {"question": "We could have had it all...", "alternatives": ["Set Fire to the Rain", "Rolling in the Deep", "Someone Like You"], "answer": 1},
+    {"question": "Cause the players gonna play, play, play, play, play...", "alternatives": ["Shake It Off", "Happy", "Don't Start Now"], "answer": 0},
+    {"question": "I said, ooh, I'm blinded by the lights.", "alternatives": ["Can't Feel My Face", "Blinding Lights", "Levitating"], "answer": 1},
+    {"question": "Never mind, I'll find someone like you.", "alternatives": ["Someone Like You", "Hello", "All I Ask"], "answer": 0},
+    {"question": "The cold never bothered me anyway.", "alternatives": ["Do You Want to Build a Snowman?", "Into the Unknown", "Let It Go"], "answer": 2},
+    {"question": "Is this the real life? Is this just fantasy?", "alternatives": ["Bohemian Rhapsody", "We Will Rock You", "Somebody to Love"], "answer": 0},
+    {"question": "Because I'm happy, clap along if you feel like happiness is the truth.", "alternatives": ["Can't Stop the Feeling!", "Happy", "Good Feeling"], "answer": 1},
+    {"question": "Welcome to the Hotel California.", "alternatives": ["Take It Easy", "Life in the Fast Lane", "Hotel California"], "answer": 2},
+    {"question": "'Cause this is thriller, thriller night!", "alternatives": ["Monster Mash", "Ghostbusters", "Thriller"], "answer": 2},
+    {"question": "Here we are now, entertain us!", "alternatives": ["Smells Like Teen Spirit", "Come As You Are", "Lithium"], "answer": 0},
+    {"question": "Take a sad song and make it better.", "alternatives": ["Yesterday", "Hey Jude", "Let It Be"], "answer": 1},
+    {"question": "If you liked it then you shoulda put a ring on it.", "alternatives": ["Irreplaceable", "Run the World", "Single Ladies"], "answer": 2},
+    {"question": "Baby, you're a firework!", "alternatives": ["Firework", "Roar", "Teenage Dream"], "answer": 0},
+    {"question": "You're gonna be the one that saves me.", "alternatives": ["Champagne Supernova", "Wonderwall", "Don't Look Back in Anger"], "answer": 1},
+    {"question": "Billie Jean is not my lover.", "alternatives": ["Thriller", "Billie Jean", "Beat It"], "answer": 1},
+    {"question": "Whoa, we're halfway there!", "alternatives": ["You Give Love a Bad Name", "Livin' on a Prayer", "Wanted Dead or Alive"], "answer": 1},
+    {"question": "I'm off the deep end, watch as I dive in.", "alternatives": ["Shallow", "Always Remember Us This Way", "Is That Alright?"], "answer": 0},
+    {"question": "Ah, ha, ha, ha, stayin' alive!", "alternatives": ["Stayin’ Alive", "Night Fever", "You Should Be Dancing"], "answer": 0},
+    {"question": "Rah-rah-ah-ah-ah, Roma-roma-ma.", "alternatives": ["Bad Romance", "Poker Face", "Alejandro"], "answer": 0},
+    {"question": "I'm gonna fight 'em all.", "alternatives": ["Seven Nation Army", "Fell in Love with a Girl", "Icky Thump"], "answer": 0},
+    {"question": "Hey now, you're an all-star, get your game on, go play!", "alternatives": ["Buddy Holly", "Smells Like Teen Spirit", "All Star"], "answer": 2},
+    {"question": "We could have had it all.", "alternatives": ["Rolling in the Deep", "Set Fire to the Rain", "Hello"], "answer": 0},
+    {"question": "Take on me (take on me).", "alternatives": ["Take On Me", "Hunting High and Low", "The Sun Always Shines on T.V."], "answer": 0},
+    {"question": "Can't read my, can't read my poker face.", "alternatives": ["Just Dance", "Bad Romance", "Poker Face"], "answer": 2},
+    {"question": "Lately I've been, I've been losing sleep, dreaming about the things that we could be.", "alternatives": ["Secrets", "Counting Stars", "Apologize"], "answer": 1},
+    {"question": "Despacito, quiero respirar tu cuello despacito.", "alternatives": ["Despacito", "Bailando", "Vivir Mi Vida"], "answer": 0},
+    {"question": "I can see your halo.", "alternatives": ["Halo", "Single Ladies", "Irreplaceable"], "answer": 0},
+    {"question": "I found a love for me.", "alternatives": ["Perfect", "Thinking Out Loud", "Photograph"], "answer": 0},
+    {"question": "This time for Africa!", "alternatives": ["Hips Don't Lie", "Waka Waka (This Time for Africa)", "La La La"], "answer": 1},
+    {"question": "With a taste of your lips, I'm on a ride.", "alternatives": ["Toxic", "Gimme More", "Oops!... I Did It Again"], "answer": 0},
+    {"question": "You only get one shot, do not miss your chance to blow.", "alternatives": ["Lose Yourself", "Not Afraid", "The Real Slim Shady"], "answer": 0},
+    {"question": "I got the eye of the tiger, a fighter, dancing through the fire.", "alternatives": ["Roar", "Firework", "Stronger"], "answer": 0},
+    {"question": "I'm gonna swing from the chandelier.", "alternatives": ["Elastic Heart", "Cheap Thrills", "Chandelier"], "answer": 2},
+    {"question": "Havana, ooh na-na.", "alternatives": ["Señorita", "Havana", "Bailando"], "answer": 1},
+    {"question": "Can't nobody tell me nothin'.", "alternatives": ["Country Roads", "Old Town Road", "The Git Up"], "answer": 1},
+    {"question": "My bad habits lead to late nights endin' alone.", "alternatives": ["Shape of You", "Blinding Lights", "Bad Habits"], "answer": 2},
+    {"question": "They say, 'Dance for me, dance for me, dance for me, oh-oh-oh.'", "alternatives": ["Dance Monkey", "Riptide", "Someone You Loved"], "answer": 0},
+    {"question": "Just a small-town girl, living in a lonely world.", "alternatives": ["Don't Stop Believin'", "We Built This City", "Eye of the Tiger"], "answer": 0},
+    {"question": "Tastes like strawberries on a summer evenin'.", "alternatives": ["Sunflower", "Watermelon Sugar", "Juice"], "answer": 1},
+    {"question": "I used to rule the world.", "alternatives": ["Paradise", "Clocks", "Viva La Vida"], "answer": 2},
+    {"question": "Imagine me and you, I do.", "alternatives": ["Happy Together", "Good Vibrations", "Surfin' USA"], "answer": 0},
+    {"question": "I'm waking up to ash and dust.", "alternatives": ["Demons", "Believer", "Radioactive"], "answer": 2},
+    {"question": "You know it's not the same as it was.", "alternatives": ["Watermelon Sugar", "As It Was", "Adore You"], "answer": 1},
+    {"question": "I can buy myself flowers.", "alternatives": ["Midnight Sky", "Wrecking Ball", "Flowers"], "answer": 2}
+  ],
+  
+  "clues": [
+    {"question": "2017 pop hit about falling for someone’s body and charm.", "alternatives": ["Fall For Me", "Shape of You", "Sugar"], "answer": 1},
+    {"question": "Dark, whispery pop track that starts with a deep bassline and made a teen a global star.", "alternatives": ["Mean", "Bad Guy", "Dark Horse"], "answer": 1},
+    {"question": "Funky anthem that’ll 'give it to ya' and always gets people dancing.", "alternatives": ["Levitating", "Uptown Funk", "Funky Town"], "answer": 1},
+    {"question": "Soulful heartbreak hit that skyrocketed a British singer to fame in 2011.", "alternatives": ["Rolling in the Deep", "Someone Like You", "Set Fire to the Rain"], "answer": 0},
+    {"question": "Pop anthem about ignoring the haters and dancing away the drama.", "alternatives": ["Shake It Off", "Don't Start Now", "Happy"], "answer": 0},
+    {"question": "80s-style synthpop song that ruled the charts and TikTok in 2020.", "alternatives": ["Blinding Lights", "Levitating", "Can't Feel My Face"], "answer": 0},
+    {"question": "Emotional ballad about lost love and moving on, from a Grammy-winning artist.", "alternatives": ["All I Ask", "Someone Like You", "Hello"], "answer": 1},
+    {"question": "Disney power ballad sung by a queen who learns to embrace her powers.", "alternatives": ["Let It Go", "Do You Want to Build a Snowman?", "Into the Unknown"], "answer": 0},
+    {"question": "1975 rock opera with piano, opera, and headbanging all in one.", "alternatives": ["Bohemian Rhapsody", "Somebody to Love", "We Will Rock You"], "answer": 0},
+    {"question": "Uplifting 2014 anthem from Despicable Me 2 that makes everyone smile.", "alternatives": ["Can't Stop the Feeling!", "Happy", "Good Feeling"], "answer": 1},
+    {"question": "Classic rock track about a mysterious, dreamy hotel you can never leave.", "alternatives": ["Hotel California", "Take It Easy", "Life in the Fast Lane"], "answer": 0},
+    {"question": "Halloween dance classic with iconic choreography and spooky vibes.", "alternatives": ["Thriller", "Ghostbusters", "Monster Mash"], "answer": 0},
+    {"question": "Grunge anthem that defined the '90s rock rebellion.", "alternatives": ["Come As You Are", "Smells Like Teen Spirit", "Lithium"], "answer": 1},
+    {"question": "1968 Beatles classic offering comfort and encouragement.", "alternatives": ["Hey Jude", "Let It Be", "Yesterday"], "answer": 0},
+    {"question": "Empowering anthem for independent women everywhere.", "alternatives": ["Single Ladies", "Run the World", "Irreplaceable"], "answer": 0},
+    {"question": "Pop song inspiring people to shine bright and be themselves.", "alternatives": ["Firework", "Roar", "Teenage Dream"], "answer": 0},
+    {"question": "1995 Britpop hit still sung around campfires today.", "alternatives": ["Don't Look Back in Anger", "Wonderwall", "Champagne Supernova"], "answer": 1},
+    {"question": "Iconic bassline and story of denial and fame.", "alternatives": ["Billie Jean", "Thriller", "Beat It"], "answer": 0},
+    {"question": "Rock anthem about hope and holding on.", "alternatives": ["You Give Love a Bad Name", "Livin' on a Prayer", "Wanted Dead or Alive"], "answer": 1},
+    {"question": "Emotional duet from the film *A Star Is Born*.", "alternatives": ["Always Remember Us This Way", "Shallow", "Is That Alright?"], "answer": 1},
+    {"question": "Disco classic with falsetto vocals and a groovy beat.", "alternatives": ["Stayin’ Alive", "Night Fever", "You Should Be Dancing"], "answer": 0},
+    {"question": "Dramatic, theatrical pop hit about a toxic love affair.", "alternatives": ["Bad Romance", "Poker Face", "Alejandro"], "answer": 0},
+    {"question": "Minimalist rock hit known for its unforgettable guitar riff.", "alternatives": ["Fell in Love with a Girl", "Icky Thump", "Seven Nation Army"], "answer": 2},
+    {"question": "90s feel-good hit forever tied to *Shrek*.", "alternatives": ["Smells Like Teen Spirit", "Buddy Holly", "All Star"], "answer": 2},
+    {"question": "Soulful heartbreak hit that dominated 2011.", "alternatives": ["Rolling in the Deep", "Set Fire to the Rain", "Hello"], "answer": 0},
+    {"question": "Synthpop hit with a groundbreaking sketch-style music video.", "alternatives": ["Take On Me", "Hunting High and Low", "The Sun Always Shines on T.V."], "answer": 0},
+    {"question": "Catchy dance-pop song about love, mystery, and confidence.", "alternatives": ["Poker Face", "Bad Romance", "Just Dance"], "answer": 0},
+    {"question": "Energetic song mixing folk and pop-rock with hopeful lyrics.", "alternatives": ["Counting Stars", "Secrets", "Apologize"], "answer": 0},
+    {"question": "Massive Latin pop hit that broke streaming records worldwide.", "alternatives": ["Vivir Mi Vida", "Despacito", "Bailando"], "answer": 1},
+    {"question": "Emotional love ballad showcasing Beyoncé’s powerhouse vocals.", "alternatives": ["Single Ladies", "Halo", "Irreplaceable"], "answer": 1},
+    {"question": "Romantic wedding favorite from a red-haired British singer.", "alternatives": ["Perfect", "Photograph", "Thinking Out Loud"], "answer": 0},
+    {"question": "World Cup anthem blending pop and African rhythms.", "alternatives": ["La La La", "Hips Don't Lie", "Waka Waka (This Time for Africa)"], "answer": 2},
+    {"question": "Electropop hit known for its strings and sultry vibe.", "alternatives": ["Toxic", "Gimme More", "Oops!... I Did It Again"], "answer": 0},
+    {"question": "Motivational rap anthem from *8 Mile*.", "alternatives": ["Lose Yourself", "Not Afraid", "The Real Slim Shady"], "answer": 0},
+    {"question": "Empowering pop song about finding your inner strength.", "alternatives": ["Firework", "Roar", "Stronger"], "answer": 1},
+    {"question": "Powerful vocal performance about pain and escapism.", "alternatives": ["Chandelier", "Elastic Heart", "Cheap Thrills"], "answer": 0},
+    {"question": "Sultry Latin-inspired pop hit about love and nostalgia.", "alternatives": ["Bailando", "Señorita", "Havana"], "answer": 2},
+    {"question": "Country-trap crossover that went viral on TikTok.", "alternatives": ["Old Town Road", "The Git Up", "Country Roads"], "answer": 0},
+    {"question": "Dance-pop song about temptation and nightlife.", "alternatives": ["Bad Habits", "Blinding Lights", "Shape of You"], "answer": 0},
+    {"question": "Viral hit featuring a unique voice and street performance theme.", "alternatives": ["Riptide", "Someone You Loved", "Dance Monkey"], "answer": 2},
+    {"question": "Rock anthem about hope and perseverance.", "alternatives": ["Don't Stop Believin'", "We Built This City", "Eye of the Tiger"], "answer": 0},
+    {"question": "Sunny pop hit celebrating summer sweetness.", "alternatives": ["Sunflower", "Watermelon Sugar", "Juice"], "answer": 1},
+    {"question": "Orchestral pop anthem about a fallen king.", "alternatives": ["Paradise", "Viva La Vida", "Clocks"], "answer": 1},
+    {"question": "1960s love song with cheerful harmonies.", "alternatives": ["Happy Together", "Surfin' USA", "Good Vibrations"], "answer": 0},
+    {"question": "Energetic rock-electronic fusion about awakening and power.", "alternatives": ["Demons", "Radioactive", "Believer"], "answer": 1},
+    {"question": "Synthpop reflection on change and nostalgia.", "alternatives": ["Adore You", "Watermelon Sugar", "As It Was"], "answer": 2},
+    {"question": "Self-love anthem about independence after heartbreak.", "alternatives": ["Midnight Sky", "Wrecking Ball", "Flowers"], "answer": 2}
   ]
 }
