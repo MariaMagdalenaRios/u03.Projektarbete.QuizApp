@@ -3,18 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>🎬 Emoji Movie Quiz</title>
+    <link rel="stylesheet" href="css/style.css">
+    <title>Emoji Quiz</title>
 </head>
 <body>
-  <div class="quiz-container">
-    <h1>🎬 Emoji Movie Quiz</h1>
-    <div id="question-container">
-      <p id="question"></p>
-      <div id="answers"></div>
-    </div>
+
+  <!--First page-->
+  <div class="start-screen">
+    <h1>Welcome to the Emoji Quiz!</h1>
+    <p>Test your knowledge! Can you guess the movie, song, or code topic from emojis?</p>
     <button id="next-btn">Next</button>
-    <p id="score"></p>
   </div>
+
+
+  <!--Quiz overview/ Category selection-->
+
+  <div class="quiz-overview">
+    <h1>Choose a Category</h1>
+    <button class="category-btn" data-category="all">Movies</button>
+    <button class="category-btn" data-category="animated">Music</button>
+    <button class="category-btn" data-category="action">Programming</button>
+  </div>
+
+  <!--info dialog/modal pop up-->
+  <dialog id="info-dialog">
+    <h2>About the Quiz🎬</h2>
+    <p>Can you guess these 10 movies solely with 3 emojis?</p>
+    <button id ="start-quiz-btn">Start Quiz</button>
+    <button id="close-dialog-btn">Close</button>
+  </dialog>
+
+    <!--Quiz container example (should be hidden ?)-->
+    <div class="quiz-container">
+        <div id="question">Question text</div>
+        <div class="options">
+            <button class="option">Option 1</button>
+            <button class="option">Option 2</button>
+            <button class="option">Option 3</button>
+            <button class="option">Option 4</button>
+        </div>
+        <button id="next-btn">Next</button>
+        <div id="result" class="hidden">Your score: <span id="score"></span></div>
+    </div>      
+
+    <!--result screen-->
+    <div class="result">
+      
+
+
+    </div>
+
+    
+
+
+
+  
+
+
+
+
+  
 
   <script src="script.js"></script>
 </body>
