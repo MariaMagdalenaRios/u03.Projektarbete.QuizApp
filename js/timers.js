@@ -9,7 +9,7 @@ function formatTime(seconds) {
   return `${String(mins).padStart(2,'0')}:${String(secs).padStart(2,'0')}`;
 }
 
-const startTimer = (questionNum) => {
+export const startTimer = (questionNum) => {
   const key = `timerStart-${questionNum}`;
   if (localStorage.getItem(key)) {
     const startTime = parseInt(localStorage.getItem(key), 10);
@@ -37,7 +37,7 @@ const startTimer = (questionNum) => {
 };
 
 
-const stopTimer = (questionNum) => {
+export const stopTimer = (questionNum) => {
   localStorage.setItem(`timerDuration-${questionNum}`, count);
   localStorage.removeItem(`timerStart-${questionNum}`);
 
