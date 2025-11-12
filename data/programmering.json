@@ -1,0 +1,35 @@
+{
+  "programmering": 
+  [
+    {"question": "What is the correct way to declare a variable in JavaScript?", "alternatives": ["var x = 10;", "int x = 10;", "let x := 10;"], "answer": 0, "hint": "JavaScript uses 'var', 'let', or 'const' to declare variables."},
+    {"question": "Which symbol is used for single-line comments in JavaScript?", "alternatives": ["//", "#", "<!-- -->"], "answer": 0, "hint": "Use two forward slashes to comment a single line."},
+    {"question": "What does 'DOM' stand for?", "alternatives": ["Document Object Model", "Data Object Management", "Digital Ordinance Model"], "answer": 0, "hint": "It represents the structure of a webpage in JavaScript."},
+    {"question": "Which keyword creates a constant in JavaScript?", "alternatives": ["let", "var", "const"], "answer": 2, "hint": "Use this keyword when the value shouldn't change."},
+    {"question": "Which method converts JSON to a JavaScript object?", "alternatives": ["JSON.parse()", "JSON.stringify()", "JSON.objectify()"], "answer": 0, "hint": "It’s the opposite of JSON.stringify()."},
+    {"question": "What is the output of typeof null?", "alternatives": ["object", "null", "undefined"], "answer": 0, "hint": "It’s a long-standing JavaScript quirk."},
+    {"question": "How do you write an arrow function?", "alternatives": ["function => () {}", "() => {}", "(=>) function() {}"], "answer": 1, "hint": "This syntax was introduced in ES6."},
+    {"question": "Which operator is used for strict equality?", "alternatives": ["==", "===", "="], "answer": 1, "hint": "It compares both value and type."},
+    {"question": "How do you create an array in JavaScript?", "alternatives": ["let arr = [];", "let arr = {};", "let arr = ();"], "answer": 0, "hint": "Square brackets are used to define arrays."},
+    {"question": "Which company developed JavaScript?", "alternatives": ["Netscape", "Microsoft", "Sun Microsystems"], "answer": 0, "hint": "The same company behind the early web browser Navigator."},
+    {"question": "What is the default value of an uninitialized variable?", "alternatives": ["null", "undefined", "0"], "answer": 1, "hint": "It means a variable was declared but not assigned."},
+    {"question": "Which statement stops a loop in JavaScript?", "alternatives": ["break", "exit", "stop"], "answer": 0, "hint": "Use it to immediately terminate a loop."},
+    {"question": "Which function displays an alert box?", "alternatives": ["alert()", "prompt()", "confirm()"], "answer": 0, "hint": "It shows a popup with a message and an OK button."},
+    {"question": "How can you add a comment in JavaScript?", "alternatives": ["<!-- comment -->", "// comment", "** comment **"], "answer": 1, "hint": "Use two slashes before the text."},
+    {"question": "Which method adds a new element to an array?", "alternatives": ["push()", "append()", "add()"], "answer": 0, "hint": "This method adds elements to the end of an array."},
+    {"question": "Which statement is used for decisions?", "alternatives": ["if", "switch", "both"], "answer": 2, "hint": "You can use either for conditional logic."},
+    {"question": "What is NaN in JavaScript?", "alternatives": ["Not a Name", "Not a Number", "No Assigned Number"], "answer": 1, "hint": "It represents the result of invalid number operations."},
+    {"question": "Which loop executes at least once even if the condition is false?", "alternatives": ["for", "while", "do...while"], "answer": 2, "hint": "The condition is checked after the first iteration."},
+    {"question": "How do you round 4.7 down to 4?", "alternatives": ["Math.floor(4.7)", "Math.round(4.7)", "Math.min(4.7)"], "answer": 0, "hint": "This Math method always rounds numbers down."},
+    {"question": "Which HTML tag includes JavaScript code?", "alternatives": ["<js>", "<script>", "<javascript>"], "answer": 1, "hint": "It’s placed inside HTML to embed JavaScript."},
+    {"question": "How do you check the length of an array?", "alternatives": ["array.count", "array.size", "array.length"], "answer": 2, "hint": "Use this property to get the number of elements."},
+    {"question": "Which keyword defines a function?", "alternatives": ["def", "func", "function"], "answer": 2, "hint": "It’s used before the function name to declare it."},
+    {"question": "Which symbol represents OR in JavaScript?", "alternatives": ["&&", "||", "??"], "answer": 1, "hint": "It returns true if either operand is true."},
+    {"question": "What will '2' + 2 return?", "alternatives": ["4", "22", "Error"], "answer": 1, "hint": "The + operator concatenates strings if one operand is text."},
+    {"question": "How can you convert a string to an integer?", "alternatives": ["Number()", "parseInt()", "toInt()"], "answer": 1, "hint": "This built-in function parses strings into numbers."},
+    {"question": "What does === check in JavaScript?", "alternatives": ["Value only", "Type only", "Value and type"], "answer": 2, "hint": "It compares both value and datatype."},
+    {"question": "Which keyword is used to import modules in ES6?", "alternatives": ["require", "import", "include"], "answer": 1, "hint": "Modern syntax for including modules."},
+    {"question": "How do you declare an asynchronous function?", "alternatives": ["function async()", "async function()", "function() async"], "answer": 1, "hint": "This keyword lets you use 'await' inside the function."},
+    {"question": "Which function is used to print to the console?", "alternatives": ["console.print()", "console.log()", "print()"], "answer": 1, "hint": "It’s commonly used for debugging in browsers."},
+    {"question": "What is used to handle exceptions in JavaScript?", "alternatives": ["catch/try", "try/catch", "error()"], "answer": 1, "hint": "Wrap code in this structure to handle runtime errors."}
+  ]
+}
