@@ -18,6 +18,7 @@ export const startTimer = (questionNum) => {
     timerElement.textContent = formatTime(count);
   } else {
     // only set start time when it doesn't exist
+    count = 0;
     localStorage.setItem(key, Date.now());
     timerElement.textContent = formatTime(count);
   }
@@ -32,17 +33,20 @@ export const startTimer = (questionNum) => {
       timerElement.style.color = 'yellow';
     } else if (count >= 40) {  // 40 seconds
       timerElement.style.color = 'red';
+    } else if (count > 60) {
+      stopTimer(questionNum);
     }
   }, 1000);
 };
 
 
 export const stopTimer = (questionNum) => {
-  localStorage.setItem(`timerDuration-${questionNum}`, count);
   localStorage.removeItem(`timerStart-${questionNum}`);
 
   clearInterval(intervalId);
   intervalId = null;  
+  return count
 }
 
 
+startTimer(1);
