@@ -62,6 +62,3 @@ export const stopTimer = (questionNum) => {
 }
 
 
-startTimer(3);
-
-//console.log(stopTimer(2));
