@@ -58,7 +58,10 @@ export const stopTimer = (questionNum) => {
   intervalId = null;  
   const result = count;
   count = 0;  
-  return count
+  return result
 }
 
 
+startTimer(3);
+
+//console.log(stopTimer(2));
