@@ -9,12 +9,16 @@ function formatTime(seconds) {
   return `${String(mins).padStart(2,'0')}:${String(secs).padStart(2,'0')}`;
 }
 
+//when starting the timer make sure that html is fully loaded
+
 export const startTimer = (questionNum) => {
   const key = `timerStart-${questionNum}`;
   if (localStorage.getItem(key)) {
     const startTime = parseInt(localStorage.getItem(key), 10);
     const elapsedSeconds = Math.floor((Date.now() - startTime) / 1000);
-    count = elapsedSeconds;         
+    count = elapsedSeconds;      
+    updateTimerColor();
+   
     timerElement.textContent = formatTime(count);
   } else {
     // only set start time when it doesn't exist
@@ -29,15 +33,22 @@ export const startTimer = (questionNum) => {
 
     timerElement.textContent = formatTime(count);
 
-    if (count >= 20 && count < 40) { // 20 seconds
-      timerElement.style.color = 'yellow';
-    } else if (count >= 40) {  // 40 seconds
-      timerElement.style.color = 'red';
-    } else if (count > 60) {
-      stopTimer(questionNum);
+    updateTimerColor();
+    if (count >= 60) {
+      return stopTimer(questionNum);
     }
   }, 1000);
 };
+
+function updateTimerColor() {
+  if (count >= 40) {
+    timerElement.style.color = 'red';
+  } else if (count >= 20) {
+    timerElement.style.color = 'yellow';
+  } else {
+    timerElement.style.color = 'black';
+  }
+}
 
 
 export const stopTimer = (questionNum) => {
@@ -45,6 +56,8 @@ export const stopTimer = (questionNum) => {
 
   clearInterval(intervalId);
   intervalId = null;  
+  const result = count;
+  count = 0;  
   return count
 }
 
