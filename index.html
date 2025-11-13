@@ -12,7 +12,7 @@
   <div class="start-screen">
     <h1>Welcome to the Emoji Quiz!</h1>
     <p>Test your knowledge! Can you guess the movie, song, or code topic from emojis?</p>
-    <button id="next-btn">Next</button>
+    <button id="start-next-btn">Next</button>
   </div>
 
 
@@ -42,12 +42,19 @@
             <button class="option">Option 3</button>
             <button class="option">Option 4</button>
         </div>
-        <button id="next-btn">Next</button>
+        <button id="quiz-next-btn">Next</button>
         <div id="result" class="hidden">Your score: <span id="score"></span></div>
     </div>      
 
     <!--result screen-->
-    <div class="result">
+    <div class="result-screen">
+      <h2>Your results 🎉</h2>
+      <p>You scored<span id="final-score"></span> out of <span id="total-questions"></span></p>
+      <button id="restart-btn">Play again</button>
+      <button id="back-to-categories-btn">Choose another category</button>
+
+
+      
       
 
 
