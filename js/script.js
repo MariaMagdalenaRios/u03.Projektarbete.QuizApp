@@ -1,13 +1,25 @@
-async function loadQuizData(quiz, category) {
-    const response = await fetch(`./data/${quiz}.json`);
-    const data = await response.json();
-    const questions = data[category];
+const totalQuestions = 10;
+let currentQuestion = 0;
+
+function updateProgressBar() {
   
-    const randomQuestions = questions.sort(() => Math.random() - 0.5).slice(0, 10);
-  
-    console.log(randomQuestions);
-    return randomQuestions;
+  if (currentQuestion >= totalQuestions) {
+    return; 
   }
+
+  currentQuestion++;
+  const progress = (currentQuestion / totalQuestions) * 100;
+
+  const text = document.getElementById("progress-text");
+  const bar = document.getElementById("progress-bar");
+  
+  bar.style.width = progress + "%";
+  text.textContent = `Question ${currentQuestion} of ${totalQuestions}`;
+
+  console.log(`Current question: ${currentQuestion}`);
+  console.log(`Progress: ${progress}%`);
+}
+updateProgressBar()
 
   loadQuizData("music", "emoji")
   

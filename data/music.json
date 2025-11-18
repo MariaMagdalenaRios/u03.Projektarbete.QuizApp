@@ -1,5 +1,5 @@
 {
-  "emoji": [
+  "emojies": [
     {"question": "🍻👦➡️👧❤️", "alternatives": ["Fall For Me", "Shape of You", "Sugar"], "answer": 1, "hint": "2017 pop hit about falling for someone’s body and charm."},
     {"question": "😈👦🕶️", "alternatives": ["Mean", "Dark Horse", "Bad Guy"], "answer": 2, "hint": "Dark, whispery pop track that starts with a deep bassline and made a teen a global star."},
     {"question": "🕺🎩💃✨", "alternatives": ["Funky Town", "Uptown Funk", "Levitating"], "answer": 1, "hint": "Funky anthem that’ll 'give it to ya' and always gets people dancing."},
