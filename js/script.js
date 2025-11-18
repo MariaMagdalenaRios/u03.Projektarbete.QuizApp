@@ -215,21 +215,15 @@ function endQuiz() {
 }
 
 function updateProgressBar() {
-  if (currentQuestionIndex >= totalQuestions) {
-    return;
-  }
-
-  currentQuestionIndex++;
-  const progress = (currentQuestionIndex / totalQuestions) * 100;
+  const progress = ((currentQuestionIndex + 1) / totalQuestions) * 100;
 
   const text = document.getElementById("progress-text");
   const bar = document.getElementById("progress-bar");
 
   bar.style.width = progress + "%";
-  text.textContent = `Question ${currentQuestionIndex} of ${totalQuestions}`;
-
-  console.log(`Current question: ${currentQuestionIndex}`);
-  console.log(`Progress: ${progress}%`);
+  text.textContent = `Question ${
+    currentQuestionIndex + 1
+  } of ${totalQuestions}`;
 }
 
 // Initialize - show start screen on page load
