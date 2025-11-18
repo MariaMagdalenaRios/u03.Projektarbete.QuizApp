@@ -21,3 +21,5 @@ function updateProgressBar() {
 }
 updateProgressBar()
 
+  loadQuizData("music", "emoji")
+  
