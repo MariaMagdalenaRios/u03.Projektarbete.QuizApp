@@ -1,3 +1,6 @@
+import { startTimer, stopTimer } from "./timers.js";
+import { calculateScore } from "./scoring.js";
+
 let currentCategory = "";
 let currentType = ""; // Will store: 'emojies', 'quotes', 'lyrics', 'easy', 'hard'
 let questions = [];
@@ -29,6 +32,27 @@ document.getElementById("back-to-categories").addEventListener("click", () => {
   hideAllScreens();
   document.querySelector(".quiz-overview").style.display = "block";
 });
+document.getElementById("quiz-next-btn").addEventListener("click", () => {
+  currentQuestionIndex++;
+  // Reset option buttons styling
+  document.querySelectorAll(".option").forEach((btn) => {
+    btn.classList.remove("correct", "wrong");
+    btn.disabled = false;
+  });
+
+  updateProgressBar();
+  showQuestion();
+});
+document.getElementById("restart-btn").addEventListener("click", () => {
+  startQuiz(); // Restart with same category and type
+});
+
+document
+  .getElementById("back-to-categories-btn")
+  .addEventListener("click", () => {
+    hideAllScreens();
+    document.querySelector(".quiz-overview").style.display = "block";
+  });
 
 document.querySelectorAll(".category-btn").forEach((btn) => {
   btn.addEventListener("click", (e) => {
@@ -121,6 +145,75 @@ async function loadQuestions(category, type) {
   }
 }
 
+function selectAnswer(selectedIndex) {
+  const timeElapsed = stopTimer(currentQuestionIndex);
+  const q = questions[currentQuestionIndex];
+  const isCorrect = selectedIndex === q.answer;
+
+  // Disable all option buttons
+  document.querySelectorAll(".option").forEach((btn) => (btn.disabled = true));
+
+  // Show correct answer in green
+  const buttons = document.querySelectorAll(".option");
+  buttons[q.answer].classList.add("correct");
+
+  // Show wrong answer in red if user was incorrect
+  if (!isCorrect && selectedIndex !== -1) {
+    buttons[selectedIndex].classList.add("wrong");
+    strikes++;
+  }
+
+  // Calculate and update score
+  if (isCorrect) {
+    const points = calculateScore(timeElapsed, strikes, false, currentType);
+    score += points;
+    correctAnswers++;
+  } else {
+    score = Math.max(0, score - 100); // Penalty
+  }
+
+  // Show next button
+  document.getElementById("quiz-next-btn").style.display = "block";
+}
+
+function showQuestion() {
+  if (currentQuestionIndex >= questions.length) {
+    endQuiz();
+    return;
+  }
+
+  const q = questions[currentQuestionIndex];
+
+  // Update question text
+  document.getElementById("question").innerHTML = q.question;
+
+  // Create option buttons
+  const container = document.querySelector(".options");
+  container.innerHTML = "";
+
+  q.alternatives.forEach((option, index) => {
+    const btn = document.createElement("button");
+    btn.className = "option";
+    btn.textContent = option;
+    btn.onclick = () => selectAnswer(index);
+    container.appendChild(btn);
+  });
+
+  // Hide next button initially
+  document.getElementById("quiz-next-btn").style.display = "none";
+
+  // Start timer for this question
+  startTimer(currentQuestionIndex);
+}
+
+function endQuiz() {
+  hideAllScreens();
+  document.querySelector(".result-screen").style.display = "block";
+
+  document.getElementById("final-score").textContent = ` ${correctAnswers} `;
+  document.getElementById("total-questions").textContent = questions.length;
+}
+
 function updateProgressBar() {
   if (currentQuestionIndex >= totalQuestions) {
     return;
@@ -138,6 +231,9 @@ function updateProgressBar() {
   console.log(`Current question: ${currentQuestionIndex}`);
   console.log(`Progress: ${progress}%`);
 }
-updateProgressBar();
 
-loadQuizData("music", "emoji");
+// Initialize - show start screen on page load
+document.addEventListener("DOMContentLoaded", () => {
+  hideAllScreens();
+  document.querySelector(".start-screen").style.display = "block";
+});
