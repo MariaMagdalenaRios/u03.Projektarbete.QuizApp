@@ -1,6 +1,5 @@
 {
-  "easy": 
-  [
+  "easy": [
     {"question": "What is the correct way to declare a variable in JavaScript?", "alternatives": ["var x = 10;", "int x = 10;", "let x := 10;"], "answer": 0, "hint": "JavaScript uses 'var', 'let', or 'const' to declare variables."},
     {"question": "Which symbol is used for single-line comments in JavaScript?", "alternatives": ["//", "#", "<!-- -->"], "answer": 0, "hint": "Use two forward slashes to comment a single line."},
     {"question": "What does 'DOM' stand for?", "alternatives": ["Document Object Model", "Data Object Management", "Digital Ordinance Model"], "answer": 0, "hint": "It represents the structure of a webpage in JavaScript."},
@@ -31,6 +30,7 @@
     {"question": "How do you declare an asynchronous function?", "alternatives": ["function async()", "async function()", "function() async"], "answer": 1, "hint": "This keyword lets you use 'await' inside the function."},
     {"question": "Which function is used to print to the console?", "alternatives": ["console.print()", "console.log()", "print()"], "answer": 1, "hint": "It’s commonly used for debugging in browsers."},
     {"question": "What is used to handle exceptions in JavaScript?", "alternatives": ["catch/try", "try/catch", "error()"], "answer": 1, "hint": "Wrap code in this structure to handle runtime errors."},
+    {"question": "What is used to handle exceptions in JavaScript?", "alternatives": ["catch/try", "try/catch", "error()"], "answer": 1, "hint": "Wrap code in this structure to handle runtime errors."},
     {"question":"Which method removes the last element from an array?","alternatives":["pop()","shift()","slice()"],"answer":0,"hint":"Use pop() to remove the last element."},
     {"question":"Which method adds an element to the beginning of an array?","alternatives":["push()","unshift()","concat()"],"answer":1,"hint":"Use unshift() to add elements at the start."},
     {"question":"Which keyword is used to declare a block-scoped variable?","alternatives":["var","let","const"],"answer":1,"hint":"Use let for block-scoped variables."},
@@ -52,8 +52,7 @@
     {"question":"Which operator is used to concatenate strings?","alternatives":["+","&","*"],"answer":0,"hint":"Use + to join strings together."},
     {"question":"Which object provides date and time functionality in JavaScript?","alternatives":["Date","Time","Clock"],"answer":0,"hint":"The Date object is used to work with dates and times."}
   ],
-  "hard":
-  [
+  "hard": [
     {"question":"What will this return: [] + []?","alternatives":["0","''","undefined"],"answer":1,"hint":"Adding two arrays converts them to strings and concatenates them."},
     {"question":"What will this return: [] + {}?","alternatives":["{}","'[object Object]'","''"],"answer":1,"hint":"Empty array converted to string + object string gives '[object Object]'."},
     {"question":"What is the output of typeof NaN?","alternatives":["undefined","NaN","number"],"answer":2,"hint":"NaN is technically a number in JavaScript."},

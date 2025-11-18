@@ -1,5 +1,5 @@
 {
-"emojies": [
+  "emojies": [
     {"question": "🧙‍♂️⚡🏰🐍", "alternatives": ["Harry Potter and the Sorcerer’s Stone", "The Lord of the Rings", "Fantastic Beasts"], "answer": 0, "hint": "A young boy discovers he’s a wizard and attends a magical school."},
     {"question": "🦸‍♂️🕸️🏙️", "alternatives": ["Spider-Man", "Iron Man", "The Flash"], "answer": 0, "hint": "A teenager gains superpowers after being bitten by a radioactive spider."},
     {"question": "🧊🚢💔🌊", "alternatives": ["Titanic", "The Perfect Storm", "Poseidon"], "answer": 0, "hint": "A tragic love story unfolds on an ill-fated ship."},
@@ -50,7 +50,7 @@
     {"question": "🧟‍♂️💀🔫", "alternatives": ["World War Z", "Resident Evil", "Army of the Dead"], "answer": 1, "hint": "A woman battles bioengineered monsters and corporate corruption."},
     {"question": "🎭🤡🔪", "alternatives": ["It", "Joker", "Scream"], "answer": 1, "hint": "A failed comedian spirals into madness in Gotham City."},
     {"question": "🐍⚡🏰🎩", "alternatives": ["Fantastic Beasts", "Harry Potter and the Chamber of Secrets", "The Witcher"], "answer": 1, "hint": "A young wizard faces a deadly secret beneath his school."}
-  ],
+  ],  
   "quotes": [
     {"question": "“You're a wizard, Harry.”", "alternatives": ["Harry Potter and the Sorcerer’s Stone", "The Lord of the Rings", "Fantastic Beasts"], "answer": 0, "hint": "A boy discovers a magical world hidden from ordinary humans."},
     {"question": "“With great power comes great responsibility.”", "alternatives": ["Spider-Man", "Iron Man", "The Flash"], "answer": 0, "hint": "An uncle gives timeless advice to a superhero nephew."},
