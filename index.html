@@ -1,75 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
     <title>Emoji Quiz</title>
-</head>
-<body>
+  </head>
+  <body>
+    <!--First page-->
+    <div class="start-screen">
+      <h1>Welcome to the Emoji Quiz!</h1>
+      <p>
+        Test your knowledge! Can you guess the movie, song, or code topic from
+        emojis?
+      </p>
+      <button id="start-next-btn">Next</button>
+    </div>
 
-  <!--First page-->
-  <div class="start-screen">
-    <h1>Welcome to the Emoji Quiz!</h1>
-    <p>Test your knowledge! Can you guess the movie, song, or code topic from emojis?</p>
-    <button id="start-next-btn">Next</button>
-  </div>
+    <!--Quiz overview/ Category selection-->
 
+    <div class="quiz-overview">
+      <h1>Choose a Category</h1>
+      <button class="category-btn" data-category="all">Movies</button>
+      <button class="category-btn" data-category="animated">Music</button>
+      <button class="category-btn" data-category="action">Programming</button>
+    </div>
 
+    <!--Difficulty/Type selection-->
+    <div class="difficulty-screen">
+      <h1>Choose Quiz Type</h1>
+      <div id="difficulty-buttons">
+        <!-- Buttons will be added dynamically based on category -->
+      </div>
+      <button id="back-to-categories">Back</button>
+    </div>
 
-  <!--Quiz overview/ Category selection-->
-
-  <div class="quiz-overview">
-    <h1>Choose a Category</h1>
-    <button class="category-btn" data-category="all">Movies</button>
-    <button class="category-btn" data-category="animated">Music</button>
-    <button class="category-btn" data-category="action">Programming</button>
-  </div>
-
-  <!--info dialog/modal pop up-->
-  <dialog id="info-dialog">
-    <h2>About the Quiz🎬</h2>
-    <p>Can you guess these 10 movies solely with 3 emojis?</p>
-    <button id ="start-quiz-btn">Start Quiz</button>
-    <button id="close-dialog-btn">Close</button>
-  </dialog>
+    <!--info dialog/modal pop up-->
+    <dialog id="info-dialog">
+      <h2>About the Quiz🎬</h2>
+      <p>Can you guess these 10 movies solely with 3 emojis?</p>
+      <button id="start-quiz-btn">Start Quiz</button>
+      <button id="close-dialog-btn">Close</button>
+    </dialog>
 
     <!--Quiz container example (should be hidden ?)-->
     <div class="quiz-container">
-        <div id="timer">0</div>
-        <div id="question">Question text</div>
-        <div class="options">
-            <button class="option">Option 1</button>
-            <button class="option">Option 2</button>
-            <button class="option">Option 3</button>
-        </div>
-        <button id="quiz-next-btn">Next</button>
-        <div id="result" class="hidden">Your score: <span id="score"></span></div>
-    </div>      
+      <div id="timer">0</div>
+      <div id="question">Question text</div>
+      <div class="options">
+        <button class="option">Option 1</button>
+        <button class="option">Option 2</button>
+        <button class="option">Option 3</button>
+      </div>
+      <button id="quiz-next-btn">Next</button>
+      <div id="result" class="hidden">Your score: <span id="score"></span></div>
+    </div>
 
     <!--result screen-->
     <div class="result-screen">
       <h2>Your results 🎉</h2>
-      <p>You scored<span id="final-score"></span> out of <span id="total-questions"></span></p>
+      <p>
+        You scored<span id="final-score"></span> out of
+        <span id="total-questions"></span>
+      </p>
       <button id="restart-btn">Play again</button>
       <button id="back-to-categories-btn">Choose another category</button>
-
-
-      
-      
-
-
     </div>
 
-  <div id="progress-container">
-    <div id="progress-bar"></div>
-  </div>
-  <p id="progress-text">Question 0 of 10</p>
-    
-  
+    <div id="progress-container">
+      <div id="progress-bar"></div>
+    </div>
+    <p id="progress-text">Question 0 of 10</p>
 
-  <script type="module" src="./js/script.js"></script>
-  <script type="module" src="./js/scoring.js"></script>
-  <script type="module" src="./js/timers.js"></script>
-</body>
+    <script type="module" src="./js/script.js"></script>
+    <script type="module" src="./js/scoring.js"></script>
+    <script type="module" src="./js/timers.js"></script>
+  </body>
 </html>
