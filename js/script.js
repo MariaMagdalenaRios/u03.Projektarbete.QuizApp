@@ -1,9 +1,6 @@
-/// create ui for setting name and email => create ui for displaying ranking => fetch and sort actual data from db
-
-
 import { startTimer, stopTimer } from "./timers.js";
 import { calculateScore } from "./scoring.js";
-import {saveUser } from "./database.js";
+import {loadData, saveUser } from "./database.js";
 
 let currentCategory = "";
 let currentType = ""; // Will store: 'emojies', 'quotes', 'lyrics', 'easy', 'hard'
@@ -224,7 +221,7 @@ function showQuestion() {
   startTimer(currentQuestionIndex);
 }
 
-function endQuiz() {
+async function endQuiz() {
   hideAllScreens();
   document.querySelector(".result-screen").style.display = "block";
   document.getElementById("progress-container").style.display = "none";
@@ -240,6 +237,27 @@ function endQuiz() {
   ).textContent = ` ${score} points (${correctAnswers} correct) `;
   document.getElementById("total-questions").textContent = questions.length;
   localStorage.removeItem("quizState");
+
+  const allPlayers = await loadData()
+  allPlayers.sort((a,b) => b.average_score - a.average_score)
+
+  const rankingTable = document.getElementById("ranking-table")
+
+  allPlayers.forEach((player, index) => {
+    rankingTable.innerHTML += createRankingRow(player, index)
+  })
+}
+
+function createRankingRow(user, index) {
+  return `
+    <div class="ranking-row" >
+      <p>${index + 1}</p>
+      <p>${user.name}</p>
+      <p>${user.email}</p>
+      <p>${user.average_score}</p>
+      <p>${user.games_played}</p>
+    </div>
+  `
 }
 
 
