@@ -1,5 +1,5 @@
 {
-  "emojies": [
+  "emojis": [
     {"question": "🧙‍♂️⚡🏰🐍", "alternatives": ["Harry Potter and the Sorcerer’s Stone", "The Lord of the Rings", "Fantastic Beasts"], "answer": 0, "hint": "A young boy discovers he’s a wizard and attends a magical school."},
     {"question": "🦸‍♂️🕸️🏙️", "alternatives": ["Spider-Man", "Iron Man", "The Flash"], "answer": 0, "hint": "A teenager gains superpowers after being bitten by a radioactive spider."},
     {"question": "🧊🚢💔🌊", "alternatives": ["Titanic", "The Perfect Storm", "Poseidon"], "answer": 0, "hint": "A tragic love story unfolds on an ill-fated ship."},
