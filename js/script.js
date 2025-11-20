@@ -40,7 +40,6 @@ document.getElementById("quiz-next-btn").addEventListener("click", () => {
     btn.disabled = false;
   });
 
-  updateProgressBar();
   showQuestion();
 });
 document.getElementById("restart-btn").addEventListener("click", () => {
@@ -124,7 +123,6 @@ async function startQuiz() {
   document.getElementById("progress-container").style.display = "block";
 
   // Show first question
-  updateProgressBar();
   showQuestion();
 }
 async function loadQuestions(category, type) {
@@ -181,7 +179,7 @@ function showQuestion() {
     endQuiz();
     return;
   }
-
+  updateProgressBar();
   const q = questions[currentQuestionIndex];
 
   // Update question text
@@ -209,8 +207,10 @@ function showQuestion() {
 function endQuiz() {
   hideAllScreens();
   document.querySelector(".result-screen").style.display = "block";
-
-  document.getElementById("final-score").textContent = ` ${correctAnswers} `;
+  document.getElementById("progress-container").style.display = "none";
+  document.getElementById(
+    "final-score"
+  ).textContent = ` ${score} points (${correctAnswers} correct) `;
   document.getElementById("total-questions").textContent = questions.length;
 }
 
