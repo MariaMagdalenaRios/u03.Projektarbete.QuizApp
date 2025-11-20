@@ -41,6 +41,7 @@ document.getElementById("quiz-next-btn").addEventListener("click", () => {
   });
 
   showQuestion();
+  saveQuizState();
 });
 document.getElementById("restart-btn").addEventListener("click", () => {
   startQuiz(); // Restart with same category and type
@@ -49,6 +50,7 @@ document.getElementById("restart-btn").addEventListener("click", () => {
 document
   .getElementById("back-to-categories-btn")
   .addEventListener("click", () => {
+    localStorage.removeItem("quizState");
     hideAllScreens();
     document.querySelector(".quiz-overview").style.display = "block";
   });
@@ -172,6 +174,7 @@ function selectAnswer(selectedIndex) {
 
   // Show next button
   document.getElementById("quiz-next-btn").style.display = "block";
+  saveQuizState();
 }
 
 function showQuestion() {
@@ -212,6 +215,7 @@ function endQuiz() {
     "final-score"
   ).textContent = ` ${score} points (${correctAnswers} correct) `;
   document.getElementById("total-questions").textContent = questions.length;
+  localStorage.removeItem("quizState");
 }
 
 function updateProgressBar() {
@@ -225,9 +229,42 @@ function updateProgressBar() {
     currentQuestionIndex + 1
   } of ${totalQuestions}`;
 }
+function saveQuizState() {
+  const quizState = {
+    currentCategory,
+    currentType,
+    currentQuestionIndex,
+    score,
+    correctAnswers,
+    strikes,
+    questions,
+  };
+  localStorage.setItem("quizState", JSON.stringify(quizState));
+}
 
 // Initialize - show start screen on page load
 document.addEventListener("DOMContentLoaded", () => {
-  hideAllScreens();
-  document.querySelector(".start-screen").style.display = "block";
+  const savedState = localStorage.getItem("quizState");
+
+  if (savedState) {
+    // Resume quiz
+    const state = JSON.parse(savedState);
+    currentCategory = state.currentCategory;
+    currentType = state.currentType;
+    currentQuestionIndex = state.currentQuestionIndex;
+    score = state.score;
+    correctAnswers = state.correctAnswers;
+    strikes = state.strikes;
+    questions = state.questions;
+
+    // Show quiz screen and resume
+    hideAllScreens();
+    document.querySelector(".quiz-container").style.display = "block";
+    document.getElementById("progress-container").style.display = "block";
+    showQuestion();
+  } else {
+    // Start fresh
+    hideAllScreens();
+    document.querySelector(".start-screen").style.display = "block";
+  }
 });
