@@ -1,3 +1,4 @@
+
 import { createClient } from 'https://esm.sh/@supabase/supabase-js'
 import { supabaseUrl, supabaseServiceRoleKey } from '../localEnv.js';
 
@@ -42,7 +43,7 @@ export async function editUser(user) {
   const { data, error } = await supabase
     .from('Users') 
     .update(user)
-    .eq('id', user.id)
+    .eq('email', user.email)
 
   if (error) {
     console.error(error)
@@ -54,24 +55,31 @@ export async function editUser(user) {
 }
 
 
-export async function deleteUser(user) {
+export async function saveUser(user) {
   const authInfo = await supabase.auth.getUser()
 
-  // request with count to see whether any rows exist
   const { data, error } = await supabase
     .from('Users') 
-    .delete()
-    .eq('id', user.id)
+    .select('*')
+    .eq('email', user.email)
 
   if (error) {
     console.error(error)
-    return "error"
+    return null
   }
 
-  console.log('deleteUser data:', data);
-  return "success"
+  if (data.length > 0) {
+    console.log('User already exists:', data[0]);
+    user.games_played = data[0].games_played + 1
+    user.average_score = Math.round(((data[0].average_score * data[0].games_played) + user.current_score) / user.games_played)
+    delete user.current_score;
+    await editUser(user);
+  } else {
+    user.games_played = 1
+    user.average_score = user.current_score
+    delete user.current_score;
+
+    await addUser(user);
+  }
 }
-
-
-
 

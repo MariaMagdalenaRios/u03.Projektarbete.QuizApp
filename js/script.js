@@ -1,12 +1,18 @@
+/// create ui for setting name and email => create ui for displaying ranking => fetch and sort actual data from db
+
+
 import { startTimer, stopTimer } from "./timers.js";
 import { calculateScore } from "./scoring.js";
+import {saveUser } from "./database.js";
 
 let currentCategory = "";
 let currentType = ""; // Will store: 'emojies', 'quotes', 'lyrics', 'easy', 'hard'
 let questions = [];
-let score = 0;
+let score = 500;
 let correctAnswers = 0;
 let strikes = 0;
+let userName = "";
+let userEmail = "";
 
 const difficultyScreen = document.querySelector(".difficulty-screen");
 
@@ -21,13 +27,24 @@ function hideAllScreens() {
   document.querySelector(".quiz-container").style.display = "none";
   document.querySelector(".result-screen").style.display = "none";
   document.getElementById("progress-container").style.display = "none";
+  document.querySelector(".user-info").style.display = "none"
 }
 
 //event listeners
 document.getElementById("start-next-btn").addEventListener("click", () => {
   hideAllScreens();
+  document.querySelector(".user-info").style.display = "block";
+});
+
+
+document.getElementById("userInfo-next-btn").addEventListener("click", () => {
+  userName = document.getElementById('name').value
+  userEmail = document.getElementById('email').value
+  hideAllScreens();
   document.querySelector(".quiz-overview").style.display = "block";
 });
+
+
 document.getElementById("back-to-categories").addEventListener("click", () => {
   hideAllScreens();
   document.querySelector(".quiz-overview").style.display = "block";
@@ -211,12 +228,21 @@ function endQuiz() {
   hideAllScreens();
   document.querySelector(".result-screen").style.display = "block";
   document.getElementById("progress-container").style.display = "none";
+
+  saveUser({
+    name: userName,
+    email: userEmail,
+    current_score: score,
+  });
+
   document.getElementById(
     "final-score"
   ).textContent = ` ${score} points (${correctAnswers} correct) `;
   document.getElementById("total-questions").textContent = questions.length;
   localStorage.removeItem("quizState");
 }
+
+
 
 function updateProgressBar() {
   const progress = ((currentQuestionIndex + 1) / totalQuestions) * 100;
@@ -268,3 +294,28 @@ document.addEventListener("DOMContentLoaded", () => {
     document.querySelector(".start-screen").style.display = "block";
   }
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
