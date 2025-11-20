@@ -57,13 +57,13 @@ document
 
 document.querySelectorAll(".category-btn").forEach((btn) => {
   btn.addEventListener("click", (e) => {
-    const category = e.target.dataset.category;
+    const category = e.currentTarget.dataset.category;
 
     // Map button data-category to actual file names
     const categoryMap = {
-      all: "movie",
-      animated: "music",
-      action: "programming",
+      movies: "movies",
+      music: "music",
+      coding: "coding",
     };
 
     currentCategory = categoryMap[category];
@@ -83,13 +83,13 @@ function showDifficultyOptions(category) {
 
   // Different options based on category
   const options = {
-    movie: ["Emojis", "Quotes"],
+    movies: ["Emojis", "Quotes"],
     music: ["Emojis", "Lyrics"],
-    programming: ["Easy", "Hard"],
+    coding: ["Easy", "Hard"],
   };
 
   const typeMap = {
-    Emojis: "emojies",
+    Emojis: "emojis",
     Quotes: "quotes",
     Lyrics: "lyrics",
     Easy: "easy",

@@ -1,3 +1,13 @@
+:root{
+  --bg-alt:#ffffff;
+  --text:#1a1d2e;
+  --text-muted:#6b7280;
+  --border:#e5e7eb;
+  --shadow:rgba(0,0,0,.08);
+  --shadow-lg:rgba(0,0,0,.12);
+  --primary:#6366f1;
+}
+
 body {
   font-family: "Poppins", sans-serif;
   background-color: #f7f7f7;
@@ -5,6 +15,116 @@ body {
   margin: 0;
   padding: 2rem;
 }
+
+.hero-emoji {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.hero-title {
+  font-size:clamp(32px,6vw,56px);
+  font-weight:800;
+  margin-bottom:12px;
+  background:linear-gradient(135deg,#667eea 0%,#764ba2 100%);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  background-clip:text
+}
+
+.hero-subtitle {
+  font-size:clamp(16px,2.5vw,20px);
+  color:var(--text-muted);
+  margin-bottom:48px;
+}
+
+#start-next-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  border: 2px solid var(--border, #eee);
+  border-radius: 16px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+#start-next-btn:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px var(--shadow-lg);
+  border-color: var(--primary);
+}
+
+.next-btn-emoji {
+  font-size: 36px;
+}
+
+
+.next-btn-name {
+  font-weight: 700;
+  font-size: 18px;
+}
+
+
+#start-next-btn:hover {
+  transform:translateY(-4px);
+  box-shadow:0 8px 24px var(--shadow-lg);
+  border-color:var(--primary);
+}
+
+.quiz-overview {
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  justify-items: center;
+  padding-top: 5rem;
+}
+
+.category-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 260px;
+  background: #fff;
+  border: 2px solid var(--border, #eee);
+  border-radius: 16px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  padding: 24px 28px;
+  cursor: pointer;
+  transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+}
+
+.category-btn:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px var(--shadow-lg);
+  border-color: var(--primary);
+}
+
+.emoji-icon {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+}
+.category-name {
+  font-weight: 700;
+  font-size: 16px;
+  color: var(--text);
+  padding-top: 1rem;
+}
+
 #progress-container {
   width: 100%;
   background-color: #e0e0e0;
