@@ -54,3 +54,17 @@ body {
 .hidden {
   display: none !important;
 }
+
+
+#ranking-table {
+  max-width: 50em;
+  overflow-y: scroll;
+  margin:auto
+}
+
+
+.ranking-row {
+  display: grid;
+  grid-template-columns:  1fr 1fr 1fr 1fr 1fr;
+  border: 1px solid #4caf50;
+}
