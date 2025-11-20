@@ -40,8 +40,8 @@ document.getElementById("quiz-next-btn").addEventListener("click", () => {
     btn.disabled = false;
   });
 
-  updateProgressBar();
   showQuestion();
+  saveQuizState();
 });
 document.getElementById("restart-btn").addEventListener("click", () => {
   startQuiz(); // Restart with same category and type
@@ -50,6 +50,7 @@ document.getElementById("restart-btn").addEventListener("click", () => {
 document
   .getElementById("back-to-categories-btn")
   .addEventListener("click", () => {
+    localStorage.removeItem("quizState");
     hideAllScreens();
     document.querySelector(".quiz-overview").style.display = "block";
   });
@@ -124,7 +125,6 @@ async function startQuiz() {
   document.getElementById("progress-container").style.display = "block";
 
   // Show first question
-  updateProgressBar();
   showQuestion();
 }
 async function loadQuestions(category, type) {
@@ -174,6 +174,7 @@ function selectAnswer(selectedIndex) {
 
   // Show next button
   document.getElementById("quiz-next-btn").style.display = "block";
+  saveQuizState();
 }
 
 function showQuestion() {
@@ -181,7 +182,7 @@ function showQuestion() {
     endQuiz();
     return;
   }
-
+  updateProgressBar();
   const q = questions[currentQuestionIndex];
 
   // Update question text
@@ -209,9 +210,12 @@ function showQuestion() {
 function endQuiz() {
   hideAllScreens();
   document.querySelector(".result-screen").style.display = "block";
-
-  document.getElementById("final-score").textContent = ` ${correctAnswers} `;
+  document.getElementById("progress-container").style.display = "none";
+  document.getElementById(
+    "final-score"
+  ).textContent = ` ${score} points (${correctAnswers} correct) `;
   document.getElementById("total-questions").textContent = questions.length;
+  localStorage.removeItem("quizState");
 }
 
 function updateProgressBar() {
@@ -225,9 +229,42 @@ function updateProgressBar() {
     currentQuestionIndex + 1
   } of ${totalQuestions}`;
 }
+function saveQuizState() {
+  const quizState = {
+    currentCategory,
+    currentType,
+    currentQuestionIndex,
+    score,
+    correctAnswers,
+    strikes,
+    questions,
+  };
+  localStorage.setItem("quizState", JSON.stringify(quizState));
+}
 
 // Initialize - show start screen on page load
 document.addEventListener("DOMContentLoaded", () => {
-  hideAllScreens();
-  document.querySelector(".start-screen").style.display = "block";
+  const savedState = localStorage.getItem("quizState");
+
+  if (savedState) {
+    // Resume quiz
+    const state = JSON.parse(savedState);
+    currentCategory = state.currentCategory;
+    currentType = state.currentType;
+    currentQuestionIndex = state.currentQuestionIndex;
+    score = state.score;
+    correctAnswers = state.correctAnswers;
+    strikes = state.strikes;
+    questions = state.questions;
+
+    // Show quiz screen and resume
+    hideAllScreens();
+    document.querySelector(".quiz-container").style.display = "block";
+    document.getElementById("progress-container").style.display = "block";
+    showQuestion();
+  } else {
+    // Start fresh
+    hideAllScreens();
+    document.querySelector(".start-screen").style.display = "block";
+  }
 });
