@@ -29,15 +29,26 @@
     <!--First page-->
     <section class="start-screen">
       <div class="hero-emoji">
-        <img src="./images/clapper-board_1f3ac.png" alt="Movies" class="emoji-icon">
-        <img src="./images/musical-note_1f3b5.png" alt="Music" class="emoji-icon">
-        <img src="./images/octopus_1f419.png" alt="Coding" class="emoji-icon">
-      </div>      
+        <img
+          src="./images/clapper-board_1f3ac.png"
+          alt="Movies"
+          class="emoji-icon"
+        />
+        <img
+          src="./images/musical-note_1f3b5.png"
+          alt="Music"
+          class="emoji-icon"
+        />
+        <img src="./images/octopus_1f419.png" alt="Coding" class="emoji-icon" />
+      </div>
       <h1 class="hero-title">Welcome to the Emoji Quiz!</h1>
-      <p class="hero-subtitle">Test your knowledge! Can you guess the movie, song, or code topic from emojis?</p>
+      <p class="hero-subtitle">
+        Test your knowledge! Can you guess the movie, song, or code topic from
+        emojis?
+      </p>
       <button id="start-next-btn">
-        <span class ="next-btn-emoji">➡️</span>
-        <span class ="next-btn-name"></span>
+        <span class="next-btn-emoji">➡️</span>
+        <span class="next-btn-name"></span>
       </button>
     </section>
 
@@ -45,25 +56,36 @@
 
     <section class="quiz-overview">
       <h1 class="hero-title">Choose a Category</h1>
-    
+
       <div class="category-grid">
         <button class="category-btn" data-category="movies">
-          <img src="./images/clapper-board_1f3ac.png" alt="Movies" class="emoji-icon">
+          <img
+            src="./images/clapper-board_1f3ac.png"
+            alt="Movies"
+            class="emoji-icon"
+          />
           <span class="category-name">Movies</span>
         </button>
-    
+
         <button class="category-btn" data-category="music">
-          <img src="./images/musical-note_1f3b5.png" alt="Music" class="emoji-icon">
+          <img
+            src="./images/musical-note_1f3b5.png"
+            alt="Music"
+            class="emoji-icon"
+          />
           <span class="category-name">Music</span>
         </button>
-    
+
         <button class="category-btn" data-category="coding">
-          <img src="./images/octopus_1f419.png" alt="Coding" class="emoji-icon">
+          <img
+            src="./images/octopus_1f419.png"
+            alt="Coding"
+            class="emoji-icon"
+          />
           <span class="category-name">Coding</span>
         </button>
       </div>
     </section>
-    
 
     <!--Difficulty/Type selection-->
     <section class="difficulty-screen">
@@ -84,7 +106,6 @@
 
     <!--Quiz container example (should be hidden ?)-->
     <section class="quiz-container">
-      <button id="quit-quiz-btn">Exit Quiz</button>
       <div id="timer">0</div>
       <div id="question">Question text</div>
       <div class="options">
@@ -94,6 +115,7 @@
       </div>
       <button id="quiz-next-btn">Next</button>
       <div id="result" class="hidden">Your score: <span id="score"></span></div>
+      <button id="quit-quiz-btn">Exit Quiz</button>
     </section>
 
     <!--result screen-->
