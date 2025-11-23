@@ -73,6 +73,15 @@ document.querySelectorAll(".category-btn").forEach((btn) => {
   });
 });
 
+document.getElementById("quit-quiz-btn").addEventListener("click", () => {
+  if (confirm("Are you sure you want to quit? Your progress will be lost.")) {
+    localStorage.removeItem("quizState");
+    stopTimer(currentQuestionIndex); // Stop the timer
+    hideAllScreens();
+    document.querySelector(".quiz-overview").style.display = "block";
+  }
+});
+
 // Function to show difficulty/type options based on selected category
 function showDifficultyOptions(category) {
   hideAllScreens();
