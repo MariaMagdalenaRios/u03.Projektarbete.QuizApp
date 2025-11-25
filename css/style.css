@@ -79,10 +79,8 @@ main {
   justify-content: center;
   background: linear-gradient(135deg, #f4f3f7, #9a86fd);
   border: none;
-  border-radius: 16px;
-  box-shadow: 0 4px 12px var(--shadow);
-  width: 80px;
-  height: 80px;
+  border-radius: 50px;
+  box-shadow: 0 4px 8px var(--shadow);
   margin: 0 auto;
   cursor: pointer;
   transition: all 0.2s ease;
@@ -176,7 +174,7 @@ main {
 #progress-bar {
   width: 0%;
   height: 100%;
-  background-color: #a61dbeb8;
+  background-color: #9e299ebe;
   transition: width 0.3s ease;
 }
 
@@ -367,7 +365,7 @@ button {
   padding: 12px 22px;
   margin: 10px 0;
   border: none;
-  background: #a61dbe91;
+  background: #470f5095;
   color: white;
   border-radius: 10px;
   cursor: pointer;
@@ -397,8 +395,8 @@ button:active {
   font-weight: 700;
   margin-bottom: 20px;
   padding: 2rem;
-  color: #65008e;
-  background: rgba(255,255,255,0.3);
+  color: #9e299e;
+  background: rgba(247, 233, 244, 0.3);
   backdrop-filter: blur(5px);
   border-radius: 0px;
 }
@@ -427,7 +425,7 @@ button:active {
   max-width: 400px;
   padding: 14px 20px;
   font-size: 1rem;
-  color: #4d036a;
+  color: #fefdfe;
   border-radius: 10px;
 }
 #timer {
