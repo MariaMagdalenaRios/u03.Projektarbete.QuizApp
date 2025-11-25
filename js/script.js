@@ -44,6 +44,13 @@ document.getElementById("quiz-next-btn").addEventListener("click", () => {
   showQuestion();
 });
 document.getElementById("restart-btn").addEventListener("click", () => {
+
+    // GA4 tracking: user clicked Play Again
+  gtag('event', 'play_again', {
+    category: currentCategory,
+    type: currentType
+  });
+  
   startQuiz(); // Restart with same category and type
 });
 
