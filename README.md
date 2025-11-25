@@ -29,15 +29,30 @@ An interactive quiz application where users can test their knowledge by guessing
 - Supabase (Database)
 - LocalStorage (Timer data)
 
+## Performance Evaluation
+
+### Lighthouse Scores
+
+![Lighthouse Results](images/lighthouse-results.png)
+
+- Performance: 99/100
+- Accessibility: 100/100
+- Best Practices: 100/100
+- SEO: 100/100
+
+### Performance Optimizations
+
+1. ✅ Added `defer` attribute to all script tags
+2. ✅ Moved all scripts to bottom of HTML body
+3. ✅ Added `loading="lazy"` to all images
+4. ✅ Added meta viewport tag for mobile responsiveness
+5. ✅ Added meta description for SEO
+
 ## How to Run
 
 1. Clone the repository
 2. Open `index.html` in a browser
 3. Or use a local server (e.g., Live Server extension in VS Code)
-
-## Project Status
-
-🚧 Work in progress
 
 ## Development
 
