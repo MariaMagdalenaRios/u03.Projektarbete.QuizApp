@@ -1,11 +1,11 @@
 :root{
-  --bg-alt:#ffffff;
-  --text:#1a1d2e;
-  --text-muted:#6b7280;
-  --border:#e5e7eb;
-  --shadow:rgba(0,0,0,.08);
-  --shadow-lg:rgba(0,0,0,.12);
-  --primary:#6366f1;
+  --primary: #b9adfd;
+  --primary-dark: #6d5fa8;
+  --accent: #a78bfa;
+  --text: #2d2640;
+  --text-muted: #6b5b8c;
+  --border: #e8e4f3;
+  --shadow: rgba(187, 174, 250, 0.1);
 }
 
 body {
@@ -14,11 +14,29 @@ body {
   text-align: center;
   margin: 0;
   padding: 0;
-  background: linear-gradient(135deg, #ff9a9e, #fad0c4, #fcb69f);
+  background: linear-gradient(135deg, #f9d3f2, #c4daff, #ffffff);
   background-size: 1200% 1200%;
-  animation: gradientMove 12s ease infinite;
+  animation: gradientMove 20s ease infinite;
   font-family: Arial, sans-serif;
 }
+
+body::after {
+  content: "❓";
+  position: fixed;
+  font-size: 15rem;
+  opacity: 0.1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: float 6s ease-in-out infinite;
+  z-index: 0;
+  pointer-events: none;
+}
+main {
+  position: relative;
+  z-index: 1;
+}
+
 @keyframes gradientMove {
   0% {
     background-position: 0% 50%;
@@ -42,47 +60,54 @@ body {
   font-size:clamp(32px,6vw,56px);
   font-weight:800;
   margin-bottom:12px;
-  background:linear-gradient(135deg,#667eea 0%,#764ba2 100%);
+  background: linear-gradient(200deg, #da3598, #6d1ebdba);
   -webkit-background-clip:text;
   -webkit-text-fill-color:transparent;
   background-clip:text
 }
 
+
 .hero-subtitle {
   font-size:clamp(16px,2.5vw,20px);
   color:var(--text-muted);
   margin-bottom:48px;
+  padding: 0 1rem;
 }
-
 #start-next-btn {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #fff;
-  border: 2px solid var(--border, #eee);
+  background: linear-gradient(135deg, #f4f3f7, #9a86fd);
+  border: none;
   border-radius: 16px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
-  width: 100px;
-  height: 100px;
+  box-shadow: 0 4px 12px var(--shadow);
+  width: 80px;
+  height: 80px;
   margin: 0 auto;
   cursor: pointer;
-  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+  transition: all 0.2s ease;
 }
 
 #start-next-btn:hover {
   transform: translateY(-4px);
   box-shadow: 0 8px 24px var(--shadow-lg);
-  border-color: var(--primary);
 }
 
 .next-btn-emoji {
-  font-size: 36px;
+  font-size: 28px;
 }
 
 
 .next-btn-name {
   font-weight: 700;
   font-size: 18px;
+}
+
+#back-to-categories {
+  max-width: 150px;
+  margin: 15px auto;
+  display: block;
+
 }
 
 
@@ -115,16 +140,17 @@ body {
   background: #fff;
   border: 2px solid var(--border, #eee);
   border-radius: 16px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  box-shadow: 0 2px 6px rgba(209, 132, 248, 0.05);
   padding: 24px 28px;
   cursor: pointer;
   transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
 }
 
 .category-btn:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 24px var(--shadow-lg);
-  border-color: var(--primary);
+  background-color: #d0c9f7;
+  transform: translateY(-6px);
+  box-shadow: 0 8px 24px var(--shadow);
+
 }
 
 .emoji-icon {
@@ -150,8 +176,7 @@ body {
 #progress-bar {
   width: 0%;
   height: 100%;
-  background-color: #4caf50;
-  border-radius: 10px;
+  background-color: #a61dbeb8;
   transition: width 0.3s ease;
 }
 
@@ -191,11 +216,144 @@ body {
 .start-screen {
   display: block;
 }
-.start-screen h1 {
+.difficulty-screen h1 {
   font-size:clamp(32px,6vw,56px);
   font-weight:800;
   margin-bottom:12px;
   background: linear-gradient(200deg, #d72590, #6d1ebd);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  background-clip:text;
+}
+/* Tablet: 768px and up */
+@media (min-width: 768px) {
+  body::after {
+    font-size: 20rem;
+  }
+
+  .hero-emoji {
+    gap: 3rem;
+    margin-top: 8rem;
+  }
+
+  #start-next-btn {
+    width: 100px;
+    height: 100px;
+  }
+
+  .next-btn-emoji {
+    font-size: 36px;
+  }
+
+  .category-grid {
+    grid-template-columns: repeat(2, 1fr);
+    padding-top: 4rem;
+    gap: 2rem;
+  }
+
+  .category-btn {
+    padding: 28px 24px;
+  }
+
+  .emoji-icon {
+    width: 6rem;
+    height: 6rem;
+  }
+
+  .category-name {
+    font-size: 17px;
+  }
+  button {
+    padding: 13px 22px;
+    font-size: 1rem;
+    width: 85%;
+  }
+
+  #difficulty-buttons {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  #question {
+    padding: 1.75rem;
+  }
+
+  .option {
+    padding: 15px 22px;
+  }
+
+  #timer {
+    font-size: 2.5rem;
+    padding: 1.75rem;
+  }
+
+  #progress-container {
+    height: 22px;
+  }
+
+  #progress-text {
+    font-size: 14px;
+  }
+}
+
+/* Desktop: 1024px and up */
+@media (min-width: 1024px) {
+  body::after {
+    font-size: 25rem;
+  }
+
+  .hero-emoji {
+    gap: 4rem;
+    margin-top: 10rem;
+  }
+
+  .category-grid {
+    grid-template-columns: repeat(3, 1fr);
+    padding-top: 5rem;
+    gap: 2rem;
+  }
+
+  .category-btn {
+    padding: 32px 28px;
+  }
+
+  .emoji-icon {
+    width: 7rem;
+    height: 7rem;
+  }
+
+  .category-name {
+    font-size: 18px;
+  }
+
+  button {
+    padding: 14px 24px;
+    width: 80%;
+  }
+
+  #question {
+    padding: 2rem;
+  }
+
+  .option {
+    padding: 16px 24px;
+  }
+
+  #timer {
+    font-size: 3rem;
+    padding: 2rem;
+  }
+
+  #progress-container {
+    height: 25px;
+  }
+}
+
+.start-screen h1 {
+  font-size:clamp(32px,6vw,56px);
+  font-weight:800;
+  margin-bottom:12px;
+  background: linear-gradient(200deg, #d72590, #7e2bd2);
   -webkit-background-clip:text;
   -webkit-text-fill-color:transparent;
   background-clip:text;
@@ -209,7 +367,7 @@ button {
   padding: 12px 22px;
   margin: 10px 0;
   border: none;
-  background: #5b6ef5;
+  background: #a61dbe91;
   color: white;
   border-radius: 10px;
   cursor: pointer;
@@ -227,7 +385,7 @@ button {
 }
 
 button:hover {
-  background: #4454d9;
+  background: #dd97fb;
   transform: translateY(-2px);
 }
 
@@ -239,10 +397,10 @@ button:active {
   font-weight: 700;
   margin-bottom: 20px;
   padding: 2rem;
-  color: #333;
+  color: #65008e;
   background: rgba(255,255,255,0.3);
   backdrop-filter: blur(5px);
-  border-radius: 10px;
+  border-radius: 0px;
 }
 #quiz-next-btn {
   display: block;
@@ -269,6 +427,7 @@ button:active {
   max-width: 400px;
   padding: 14px 20px;
   font-size: 1rem;
+  color: #4d036a;
   border-radius: 10px;
 }
 #timer {
@@ -284,7 +443,7 @@ button:active {
 }
 .result-screen h2 {
   font-size: 3rem;
-  color: #f85a5a;
+  color: #f86e6e;
   margin-bottom: 10px;
   font-weight: 800;
   text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.7);
