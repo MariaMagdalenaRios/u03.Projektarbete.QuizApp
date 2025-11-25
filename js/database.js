@@ -27,6 +27,11 @@ export async function addUser(user) {
     .from('Users') 
     .insert([user])
 
+      if (!error && data) {
+    // GA tracking
+    gtag('event', 'sign_up', { method: 'email' });
+  }
+
   if (error) {
     console.error(error)
     return null
