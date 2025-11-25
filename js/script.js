@@ -57,13 +57,13 @@ document
 
 document.querySelectorAll(".category-btn").forEach((btn) => {
   btn.addEventListener("click", (e) => {
-    const category = e.target.dataset.category;
+    const category = e.currentTarget.dataset.category;
 
     // Map button data-category to actual file names
     const categoryMap = {
-      all: "movie",
-      animated: "music",
-      action: "programming",
+      movies: "movies",
+      music: "music",
+      coding: "coding",
     };
 
     currentCategory = categoryMap[category];
@@ -71,6 +71,15 @@ document.querySelectorAll(".category-btn").forEach((btn) => {
     // Show difficulty screen and populate options
     showDifficultyOptions(currentCategory);
   });
+});
+
+document.getElementById("quit-quiz-btn").addEventListener("click", () => {
+  if (confirm("Are you sure you want to quit? Your progress will be lost.")) {
+    localStorage.removeItem("quizState");
+    stopTimer(currentQuestionIndex); // Stop the timer
+    hideAllScreens();
+    document.querySelector(".quiz-overview").style.display = "block";
+  }
 });
 
 // Function to show difficulty/type options based on selected category
@@ -83,13 +92,13 @@ function showDifficultyOptions(category) {
 
   // Different options based on category
   const options = {
-    movie: ["Emojis", "Quotes"],
+    movies: ["Emojis", "Quotes"],
     music: ["Emojis", "Lyrics"],
-    programming: ["Easy", "Hard"],
+    coding: ["Easy", "Hard"],
   };
 
   const typeMap = {
-    Emojis: "emojies",
+    Emojis: "emojis",
     Quotes: "quotes",
     Lyrics: "lyrics",
     Easy: "easy",
