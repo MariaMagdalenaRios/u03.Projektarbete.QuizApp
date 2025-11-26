@@ -2,14 +2,18 @@
 <html lang="en">
   <head>
     <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-NHDD5B6QW3"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-NHDD5B6QW3', { 
-  });
-</script>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-NHDD5B6QW3"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-NHDD5B6QW3", {});
+    </script>
 
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -143,6 +147,10 @@
       </div>
       <button id="quiz-next-btn">Next</button>
       <div id="result" class="hidden">Your score: <span id="score"></span></div>
+      <div id="progress-container">
+        <div id="progress-bar"></div>
+      </div>
+      <p id="progress-text"></p>
       <button id="quit-quiz-btn">Exit Quiz</button>
     </section>
 
@@ -156,11 +164,6 @@
       <button id="restart-btn">Play again</button>
       <button id="back-to-categories-btn">Choose another category</button>
     </section>
-
-    <div id="progress-container">
-      <div id="progress-bar"></div>
-    </div>
-    <p id="progress-text"></p>
 
     <script type="module" src="./js/script.js" defer></script>
     <script type="module" src="./js/scoring.js" defer></script>
