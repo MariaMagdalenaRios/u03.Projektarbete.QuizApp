@@ -7,6 +7,11 @@ let questions = [];
 let score = 0;
 let correctAnswers = 0;
 let strikes = 0;
+let hintsLeft = 0;
+let isHintOpen = false;
+
+const popup = document.getElementById("hintPopup");
+const hintButton = document.getElementById("hintBtn");
 
 const difficultyScreen = document.querySelector(".difficulty-screen");
 
@@ -41,6 +46,8 @@ document.getElementById("quiz-next-btn").addEventListener("click", () => {
   });
 
   showQuestion();
+  isHintOpen = false;
+  showHint()
   saveQuizState();
 });
 document.getElementById("restart-btn").addEventListener("click", () => {
@@ -152,6 +159,8 @@ async function startQuiz() {
   score = 0;
   correctAnswers = 0;
   strikes = 0;
+  hintsLeft = 2;
+  isHintOpen = false
 
   // Load questions from JSON file
   await loadQuestions(currentCategory, currentType);
@@ -221,6 +230,15 @@ function selectAnswer(selectedIndex) {
   saveQuizState();
 }
 
+function showHint () {
+  
+  hintButton.innerHTML = isHintOpen ?  questions[currentQuestionIndex].hint : "💡"
+  hintButton.style.fontSize = isHintOpen ? "14px" : "25px";
+  popup.textContent = hintsLeft ?? 0;
+  popup.style.background = hintsLeft > 0 ? "red" : "gray";
+
+}
+
 function showQuestion() {
   if (currentQuestionIndex >= questions.length) {
     endQuiz();
@@ -282,6 +300,8 @@ function saveQuizState() {
     correctAnswers,
     strikes,
     questions,
+    hintsLeft,
+    isHintOpen, 
   };
   localStorage.setItem("quizState", JSON.stringify(quizState));
 }
@@ -300,15 +320,39 @@ document.addEventListener("DOMContentLoaded", () => {
     correctAnswers = state.correctAnswers;
     strikes = state.strikes;
     questions = state.questions;
+    hintsLeft = state.hintsLeft;
+    isHintOpen = state.isHintOpen
+
 
     // Show quiz screen and resume
     hideAllScreens();
     document.querySelector(".quiz-container").style.display = "block";
     document.getElementById("progress-container").style.display = "block";
     showQuestion();
+    showHint()
   } else {
     // Start fresh
     hideAllScreens();
     document.querySelector(".start-screen").style.display = "block";
   }
+});
+
+
+hintButton.addEventListener("click", () => {
+  if (hintsLeft > 0) {
+    if (hintButton.innerHTML === "💡") {
+      hintsLeft--;
+      isHintOpen = true;
+    }
+
+    popup.textContent = hintsLeft;
+    hintButton.innerHTML = questions[currentQuestionIndex].hint;
+    hintButton.style.fontSize = "14px";
+  }
+
+  if (hintsLeft === 0) {
+    popup.style.background = "gray";
+  }
+
+  saveQuizState(); // <-- save updated state
 });
