@@ -89,6 +89,32 @@ An interactive quiz application where users can test their knowledge by guessing
    - ✅ **0 errors** in browser console
    - ✅ **0 warnings**
    - Proper error handling
+  
+     
+  ### Google Analytics
+
+#### Navigation & Selection
+- `select_content` (category) - When user selects quiz category (Movies, Music, Coding)
+- `select_content` (difficulty) - When user selects difficulty/type (Emojis, Quotes, Lyrics, Easy, Hard)
+
+#### Quiz Lifecycle
+- `quiz_start` - When user starts a quiz
+- `answer_selected` - When user submits an answer (includes question_id, correct/incorrect)
+- `hint_used` - When user clicks hint button
+- `hint_unavailable` - When user attempts to use hint with none remaining
+- `quiz_completed` - When user finishes all 10 questions (includes score, correct answers)
+- `quiz_quit` - When user exits quiz mid-game (includes dropout point, progress)
+- `play_again` - When user restarts quiz after completion
+
+### Insights
+- Track which quiz categories and difficulties are most popular
+- Monitor completion rates and identify dropout points
+- Analyze question difficulty (detect problematic questions)
+- Measure hint system effectiveness
+- Optimize quiz length based on quit patterns
+- Understand user engagement and replay behavior
+- Data-driven content strategy decisions
+
    
 
 ## Development
