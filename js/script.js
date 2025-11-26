@@ -383,6 +383,15 @@ document.addEventListener("DOMContentLoaded", () => {
 hintButton.addEventListener("click", () => {
   if (hintsLeft > 0) {
     if (hintButton.innerHTML === "💡") {
+
+       // GA4 tracking: hint used
+      gtag('event', 'hint_used', {
+        category: currentCategory,
+        difficulty: currentType,
+        question_id: currentQuestionIndex + 1,
+        hints_remaining: hintsLeft - 1
+      });
+      
       hintsLeft--;
       isHintOpen = true;
     }
