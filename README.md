@@ -44,12 +44,11 @@ An interactive quiz application where users can test their knowledge by guessing
 ## Performance Evaluation
 
 ### Lighthouse Scores
-
-![Lighthouse Results](images/lighthouse-result.png)
+<img src="images/lighthouse-result.png" alt="Lighthouse results" width="250">
 
 | Category       | Score      |
 | -------------- | ---------- |
-| Performance    | 99/100 ✅  |
+| Performance    | 100/100 ✅  |
 | Accessibility  | 100/100 ✅ |
 | Best Practices | 100/100 ✅ |
 | SEO            | 100/100 ✅ |
