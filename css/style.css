@@ -526,3 +526,36 @@ button:active {
   align-items: center;
   justify-content: center;
 }
+
+.user-info {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; /* centers items horizontally */
+  gap: 0.5rem; /* adds spacing between children */
+  height: 80vh;
+  margin: 0 auto; /* remove top 20% margin */
+}
+
+.user-info input,
+.user-info button,
+.user-info label {
+  width: 100%;      /* make them all full width inside the container */
+  max-width: 300px; /* optional max width */
+  box-sizing: border-box;
+}
+
+.user-info label {
+  background-color: #9a86fd15;
+  padding: 0.5rem;
+  border-radius: 2rem;
+}
+
+.user-info input {
+  padding: 0.5rem;
+  border: 2px solid #6d1ebd;
+  border-radius: 1.5rem;
+}
+
+.user-info button {
+  margin-top: 1rem;
+}

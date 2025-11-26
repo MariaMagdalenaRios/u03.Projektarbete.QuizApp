@@ -38,7 +38,7 @@ function hideAllScreens() {
 //event listeners
 document.getElementById("start-next-btn").addEventListener("click", () => {
   hideAllScreens();
-  document.querySelector(".user-info").style.display = "block";
+  document.querySelector(".user-info").style.display = "flex";
 });
 
 document.getElementById("userInfo-next-btn").addEventListener("click", () => {
