@@ -44,6 +44,13 @@ document.getElementById("quiz-next-btn").addEventListener("click", () => {
   saveQuizState();
 });
 document.getElementById("restart-btn").addEventListener("click", () => {
+
+    // GA4 tracking: user clicked Play Again
+  gtag('event', 'play_again', {
+    category: currentCategory,
+    type: currentType
+  });
+  
   startQuiz(); // Restart with same category and type
 });
 
@@ -67,6 +74,12 @@ document.querySelectorAll(".category-btn").forEach((btn) => {
     };
 
     currentCategory = categoryMap[category];
+
+     // GA tracking
+    gtag('event', 'select_content', {
+      content_type: 'category',
+      item_id: currentCategory
+    });
 
     // Show difficulty screen and populate options
     showDifficultyOptions(currentCategory);
@@ -111,8 +124,23 @@ function showDifficultyOptions(category) {
     btn.className = "difficulty-btn";
     btn.addEventListener("click", () => {
       currentType = typeMap[option];
-      startQuiz();
+
+      // GA tracking
+    gtag('event', 'select_content', {
+      content_type: 'difficulty',
+      item_id: currentType
     });
+
+      startQuiz();
+
+      // GA tracking for quiz_start
+    gtag('event', 'quiz_start', {
+      category: currentCategory,
+      difficulty: currentType
+    });
+    });
+
+
     buttonContainer.appendChild(btn);
   });
 }
@@ -158,6 +186,13 @@ function selectAnswer(selectedIndex) {
   const timeElapsed = stopTimer(currentQuestionIndex);
   const q = questions[currentQuestionIndex];
   const isCorrect = selectedIndex === q.answer;
+
+  // GA tracking for each answer
+  gtag('event', 'answer_selected', {
+    question_id: currentQuestionIndex + 1,
+    answer_id: selectedIndex,
+    correct: isCorrect
+  });
 
   // Disable all option buttons
   document.querySelectorAll(".option").forEach((btn) => (btn.disabled = true));
