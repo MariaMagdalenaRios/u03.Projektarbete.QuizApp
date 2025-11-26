@@ -183,7 +183,15 @@ main {
 
 .difficulty-screen {
   display: none;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  padding-top: 10vh; /* Shifts content slightly up */
 }
+
 .option.correct {
   background-color: #4caf50;
   color: white;
