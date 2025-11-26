@@ -88,6 +88,17 @@ document.querySelectorAll(".category-btn").forEach((btn) => {
 
 document.getElementById("quit-quiz-btn").addEventListener("click", () => {
   if (confirm("Are you sure you want to quit? Your progress will be lost.")) {
+
+    // GA4 tracking: user quit quiz
+    gtag('event', 'quiz_quit', {
+      category: currentCategory,
+      difficulty: currentType,
+      questions_answered: currentQuestionIndex,
+      total_questions: totalQuestions,
+      score: score,
+      correct_answers: correctAnswers
+    });
+
     localStorage.removeItem("quizState");
     stopTimer(currentQuestionIndex); // Stop the timer
     hideAllScreens();
@@ -259,6 +270,15 @@ function endQuiz() {
     "final-score"
   ).textContent = ` ${score} points (${correctAnswers} correct) `;
   document.getElementById("total-questions").textContent = questions.length;
+
+  // GA4 tracking for quiz completion
+  gtag('event', 'quiz_completed', {
+  category: currentCategory,
+  difficulty: currentType,
+  score: score,
+  total_questions: questions.length
+});
+
   localStorage.removeItem("quizState");
 }
 
