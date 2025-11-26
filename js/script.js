@@ -10,11 +10,16 @@ let correctAnswers = 0;
 let strikes = 0;
 let userName = "";
 let userEmail = "";
+let hintsLeft = 0;
 
 const difficultyScreen = document.querySelector(".difficulty-screen");
 
 const totalQuestions = 10;
 let currentQuestionIndex = 0;
+
+const popup = document.getElementById("hintPopup");
+const hintButton = document.getElementById("hintBtn");
+
 
 //screen navigation functions
 function hideAllScreens() {
@@ -129,6 +134,7 @@ async function startQuiz() {
   score = 0;
   correctAnswers = 0;
   strikes = 0;
+  hintsLeft = 2
 
   // Load questions from JSON file
   await loadQuestions(currentCategory, currentType);
@@ -192,6 +198,11 @@ function selectAnswer(selectedIndex) {
 }
 
 function showQuestion() {
+  hintButton.innerHTML = "💡";
+  hintButton.style.fontSize = "25px";
+  popup.textContent = hintsLeft ?? 0;
+  popup.style.background = hintsLeft > 0 ? "red" : "gray";
+
   if (currentQuestionIndex >= questions.length) {
     endQuiz();
     return;
@@ -282,6 +293,7 @@ function saveQuizState() {
     correctAnswers,
     strikes,
     questions,
+    hintsLeft
   };
   localStorage.setItem("quizState", JSON.stringify(quizState));
 }
@@ -300,6 +312,7 @@ document.addEventListener("DOMContentLoaded", () => {
     correctAnswers = state.correctAnswers;
     strikes = state.strikes;
     questions = state.questions;
+    hintsLeft = state.hintsLeft
 
     // Show quiz screen and resume
     hideAllScreens();
@@ -314,26 +327,19 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
+hintButton.addEventListener("click", () => {
+  if (hintsLeft > 0) {
+    if (hintButton.innerHTML == "💡") hintsLeft--;
 
+    popup.textContent = hintsLeft;
+    hintButton.innerHTML = questions[currentQuestionIndex].hint
+    hintButton.style.fontSize = "14px"
+  }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  // Optional: hide popup when no hints remain
+  if (hintsLeft === 0) {
+    popup.style.background = "gray";
+    button.disabled
+  }
+});
 
