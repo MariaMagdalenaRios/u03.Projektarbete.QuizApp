@@ -13,37 +13,108 @@
 
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Test your knowledge with our interactive emoji quiz! Guess movies, songs, and programming concepts from emojis. Play online for free."
+    />
+    <meta
+      name="keywords"
+      content="emoji quiz, movie quiz, music quiz, programming quiz, online quiz, emoji game, trivia game"
+    />
+    <meta name="author" content="Your Team Name" />
+
+    <!-- Open Graph for social sharing -->
+    <meta property="og:title" content="Emoji Quiz - Test Your Knowledge!" />
+    <meta
+      property="og:description"
+      content="Can you guess movies, songs, and code topics from emojis?"
+    />
+    <meta property="og:type" content="website" />
+
     <link rel="stylesheet" href="css/style.css" />
-    <title>Emoji Quiz</title>
+    <title>Emoji Quiz - Movies, Music & Programming | Play Online Free</title>
   </head>
-  <body>
+
+  <main>
     <!--First page-->
-    <div class="start-screen">
-      <h1>Welcome to the Emoji Quiz!</h1>
-      <p>
+    <section class="start-screen">
+      <div class="hero-emoji">
+        <img
+          src="./images/clapper-board_1f3ac.png"
+          alt="Movies"
+          class="emoji-icon"
+          loading="lazy"
+        />
+        <img
+          src="./images/musical-note_1f3b5.png"
+          alt="Music"
+          class="emoji-icon"
+          loading="lazy"
+        />
+        <img
+          src="./images/octopus_1f419.png"
+          alt="Coding"
+          class="emoji-icon"
+          loading="lazy"
+        />
+      </div>
+      <h1 class="hero-title">Welcome to the Emoji Quiz!</h1>
+      <p class="hero-subtitle">
         Test your knowledge! Can you guess the movie, song, or code topic from
         emojis?
       </p>
-      <button id="start-next-btn">Next</button>
-    </div>
+      <button id="start-next-btn">
+        <span class="next-btn-emoji">➡️</span>
+        <span class="next-btn-name"></span>
+      </button>
+    </section>
 
-    <!--Quiz overview/ Category selection-->
+    <!--Quiz overview/Category selection-->
 
-    <div class="quiz-overview">
-      <h1>Choose a Category</h1>
-      <button class="category-btn" data-category="all">Movies</button>
-      <button class="category-btn" data-category="animated">Music</button>
-      <button class="category-btn" data-category="action">Programming</button>
-    </div>
+    <section class="quiz-overview">
+      <h1 class="hero-title">Choose a Category</h1>
+
+      <div class="category-grid">
+        <button class="category-btn" data-category="movies">
+          <img
+            src="./images/clapper-board_1f3ac.png"
+            alt="Movies"
+            class="emoji-icon"
+            loading="lazy"
+          />
+          <span class="category-name">Movies</span>
+        </button>
+
+        <button class="category-btn" data-category="music">
+          <img
+            src="./images/musical-note_1f3b5.png"
+            alt="Music"
+            class="emoji-icon"
+            loading="lazy"
+          />
+          <span class="category-name">Music</span>
+        </button>
+
+        <button class="category-btn" data-category="coding">
+          <img
+            src="./images/octopus_1f419.png"
+            alt="Coding"
+            class="emoji-icon"
+            loading="lazy"
+          />
+          <span class="category-name">Coding</span>
+        </button>
+      </div>
+    </section>
 
     <!--Difficulty/Type selection-->
-    <div class="difficulty-screen">
+    <section class="difficulty-screen">
       <h1>Choose Quiz Type</h1>
       <div id="difficulty-buttons">
         <!-- Buttons will be added dynamically based on category -->
       </div>
       <button id="back-to-categories">Back</button>
-    </div>
+    </section>
 
     <!--info dialog/modal pop up-->
     <dialog id="info-dialog">
@@ -54,7 +125,7 @@
     </dialog>
 
     <!--Quiz container example (should be hidden ?)-->
-    <div class="quiz-container">
+    <section class="quiz-container">
       <div id="timer">0</div>
       <div id="question">Question text</div>
       <div class="options">
@@ -64,10 +135,11 @@
       </div>
       <button id="quiz-next-btn">Next</button>
       <div id="result" class="hidden">Your score: <span id="score"></span></div>
-    </div>
+      <button id="quit-quiz-btn">Exit Quiz</button>
+    </section>
 
     <!--result screen-->
-    <div class="result-screen">
+    <section class="result-screen">
       <h2>Your results 🎉</h2>
       <p>
         You scored<span id="final-score"></span> out of
@@ -75,15 +147,15 @@
       </p>
       <button id="restart-btn">Play again</button>
       <button id="back-to-categories-btn">Choose another category</button>
-    </div>
+    </section>
 
     <div id="progress-container">
       <div id="progress-bar"></div>
     </div>
-    <p id="progress-text">Question 0 of 10</p>
+    <p id="progress-text"></p>
 
-    <script type="module" src="./js/script.js"></script>
-    <script type="module" src="./js/scoring.js"></script>
-    <script type="module" src="./js/timers.js"></script>
-  </body>
+    <script type="module" src="./js/script.js" defer></script>
+    <script type="module" src="./js/scoring.js" defer></script>
+    <script type="module" src="./js/timers.js" defer></script>
+  </main>
 </html>

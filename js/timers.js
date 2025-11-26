@@ -31,13 +31,23 @@ export const startTimer = (questionNum) => {
   intervalId = setInterval(() => {
     count++;
 
-    timerElement.textContent = formatTime(count);
-
-    updateTimerColor();
     if (count >= 60) {
-      return stopTimer(questionNum);
+      stopTimer(questionNum);
+      timerElement.textContent = "Game Over!";
+      timerElement.style.color = "red";
+      
+      disableQuiz();
+      return;
     }
+
+    timerElement.textContent = formatTime(count);
+    updateTimerColor();
   }, 1000);
+
+  function disableQuiz() {
+    const buttons = document.querySelectorAll(".option");
+    buttons.forEach(btn => btn.disabled = true);
+  }
 };
 
 function updateTimerColor() {
