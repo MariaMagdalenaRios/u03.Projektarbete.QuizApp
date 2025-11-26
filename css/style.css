@@ -451,3 +451,36 @@ button:active {
   margin-bottom: 30px;
   color: #333;
 }
+
+#ranking-table p {
+  font-size: 1rem;
+  margin: 0px;
+}
+
+
+#ranking-table {
+  max-width: 50em;
+  max-height: 30rem;
+  overflow-y: scroll;
+  margin: auto;
+
+  border: 2px solid;
+  border-image: linear-gradient(45deg, #192e80, #8e1699) 1;
+  border-radius: 20px;
+  padding: 10px;
+}
+
+.ranking-row {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  padding: 10px;
+  border-bottom: 1px solid rgba(0,0,0,0.2); /* thin separator */
+}
+
+.ranking-row:last-child {
+  border-bottom: none;
+}
+
+  
+
+

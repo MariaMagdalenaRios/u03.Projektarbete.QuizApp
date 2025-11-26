@@ -1,1 +1,6 @@
 localEnv.js
+# Local Netlify folder
+.netlify
+.vscode
+node_modules
+.DS_Store
