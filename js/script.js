@@ -10,6 +10,13 @@ let strikes = 0;
 let userName = "";
 let userEmail = "";
 
+let hintsLeft = 0;
+let isHintOpen = false;
+
+const popup = document.getElementById("hintPopup");
+const hintButton = document.getElementById("hintBtn");
+let lastCorrect = false;
+let totalTime = 0;
 
 const difficultyScreen = document.querySelector(".difficulty-screen");
 
@@ -55,16 +62,17 @@ document.getElementById("quiz-next-btn").addEventListener("click", () => {
   });
 
   showQuestion();
+  isHintOpen = false;
+  showHint();
   saveQuizState();
 });
 document.getElementById("restart-btn").addEventListener("click", () => {
-
-    // GA4 tracking: user clicked Play Again
-  gtag('event', 'play_again', {
+  // GA4 tracking: user clicked Play Again
+  gtag("event", "play_again", {
     category: currentCategory,
-    type: currentType
+    type: currentType,
   });
-  
+
   startQuiz(); // Restart with same category and type
 });
 
@@ -89,10 +97,10 @@ document.querySelectorAll(".category-btn").forEach((btn) => {
 
     currentCategory = categoryMap[category];
 
-     // GA tracking
-    gtag('event', 'select_content', {
-      content_type: 'category',
-      item_id: currentCategory
+    // GA tracking
+    gtag("event", "select_content", {
+      content_type: "category",
+      item_id: currentCategory,
     });
 
     // Show difficulty screen and populate options
@@ -102,6 +110,16 @@ document.querySelectorAll(".category-btn").forEach((btn) => {
 
 document.getElementById("quit-quiz-btn").addEventListener("click", () => {
   if (confirm("Are you sure you want to quit? Your progress will be lost.")) {
+    // GA4 tracking: user quit quiz
+    gtag("event", "quiz_quit", {
+      category: currentCategory,
+      difficulty: currentType,
+      questions_answered: currentQuestionIndex,
+      total_questions: totalQuestions,
+      score: score,
+      correct_answers: correctAnswers,
+    });
+
     localStorage.removeItem("quizState");
     stopTimer(currentQuestionIndex); // Stop the timer
     hideAllScreens();
@@ -140,23 +158,30 @@ function showDifficultyOptions(category) {
       currentType = typeMap[option];
 
       // GA tracking
-    gtag('event', 'select_content', {
-      content_type: 'difficulty',
-      item_id: currentType
-    });
+      gtag("event", "select_content", {
+        content_type: "difficulty",
+        item_id: currentType,
+      });
 
       startQuiz();
 
       // GA tracking for quiz_start
-    gtag('event', 'quiz_start', {
-      category: currentCategory,
-      difficulty: currentType
+      gtag("event", "quiz_start", {
+        category: currentCategory,
+        difficulty: currentType,
+      });
     });
-    });
-
 
     buttonContainer.appendChild(btn);
   });
+}
+
+function shuffleArray(arr) {
+  for (let i = arr.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [arr[i], arr[j]] = [arr[j], arr[i]];
+  }
+  return arr;
 }
 
 // Function to start the quiz
@@ -166,6 +191,10 @@ async function startQuiz() {
   score = 0;
   correctAnswers = 0;
   strikes = 0;
+  hintsLeft = 2;
+  isHintOpen = false;
+  lastCorrect = false;
+  totalTime = 0;
 
   // Load questions from JSON file
   await loadQuestions(currentCategory, currentType);
@@ -185,7 +214,7 @@ async function loadQuestions(category, type) {
     questions = data[type] || [];
 
     // Limit to 10 questions
-    questions = questions.slice(0, totalQuestions);
+    questions = shuffleArray(questions).slice(0, 10);
 
     console.log(
       `Loaded ${questions.length} questions for ${category} - ${type}`
@@ -202,10 +231,10 @@ function selectAnswer(selectedIndex) {
   const isCorrect = selectedIndex === q.answer;
 
   // GA tracking for each answer
-  gtag('event', 'answer_selected', {
+  gtag("event", "answer_selected", {
     question_id: currentQuestionIndex + 1,
     answer_id: selectedIndex,
-    correct: isCorrect
+    correct: isCorrect,
   });
 
   // Disable all option buttons
@@ -218,21 +247,35 @@ function selectAnswer(selectedIndex) {
   // Show wrong answer in red if user was incorrect
   if (!isCorrect && selectedIndex !== -1) {
     buttons[selectedIndex].classList.add("wrong");
-    strikes++;
   }
 
   // Calculate and update score
   if (isCorrect) {
-    const points = calculateScore(timeElapsed, strikes, false, currentType);
-    score += points;
+    lastCorrect = true;
     correctAnswers++;
+    totalTime += timeElapsed;
+    if (lastCorrect) {
+      strikes += 1;
+    }
   } else {
-    score = Math.max(0, score - 100); // Penalty
+    lastCorrect = false;
+    strikes = 0;
   }
 
+  console.log(timeElapsed, strikes, currentType);
+
   // Show next button
-  document.getElementById("quiz-next-btn").style.display = "block";
+  document.getElementById("quiz-next-btn").style.visibility = "visible";
   saveQuizState();
+}
+
+function showHint() {
+  hintButton.innerHTML = isHintOpen
+    ? questions[currentQuestionIndex].hint
+    : "💡";
+  hintButton.style.fontSize = isHintOpen ? "14px" : "25px";
+  popup.textContent = hintsLeft ?? 0;
+  popup.style.background = hintsLeft > 0 ? "red" : "gray";
 }
 
 function showQuestion() {
@@ -259,7 +302,7 @@ function showQuestion() {
   });
 
   // Hide next button initially
-  document.getElementById("quiz-next-btn").style.display = "none";
+  document.getElementById("quiz-next-btn").style.visibility = "hidden";
 
   // Start timer for this question
   startTimer(currentQuestionIndex);
@@ -267,6 +310,7 @@ function showQuestion() {
 
 
 async function endQuiz() {
+  score = calculateScore(totalTime, strikes, false, currentType);
   hideAllScreens();
   document.querySelector(".result-screen").style.display = "block";
   document.getElementById("progress-container").style.display = "none";
@@ -296,6 +340,15 @@ async function endQuiz() {
     "final-score"
   ).textContent = ` ${score} points (${correctAnswers} correct) `;
   document.getElementById("total-questions").textContent = questions.length;
+
+  // GA4 tracking for quiz completion
+  gtag("event", "quiz_completed", {
+    category: currentCategory,
+    difficulty: currentType,
+    score: score,
+    total_questions: questions.length,
+  });
+
   localStorage.removeItem("quizState");
 
   const response = await fetch('/.netlify/functions/loadData');
@@ -351,6 +404,10 @@ function saveQuizState() {
     correctAnswers,
     strikes,
     questions,
+    hintsLeft,
+    isHintOpen,
+    lastCorrect,
+    totalTime,
   };
   localStorage.setItem("quizState", JSON.stringify(quizState));
 }
@@ -369,15 +426,45 @@ document.addEventListener("DOMContentLoaded", () => {
     correctAnswers = state.correctAnswers;
     strikes = state.strikes;
     questions = state.questions;
+    hintsLeft = state.hintsLeft;
+    isHintOpen = state.isHintOpen;
 
     // Show quiz screen and resume
     hideAllScreens();
     document.querySelector(".quiz-container").style.display = "block";
     document.getElementById("progress-container").style.display = "block";
     showQuestion();
+    showHint();
   } else {
     // Start fresh
     hideAllScreens();
     document.querySelector(".start-screen").style.display = "block";
   }
+});
+
+hintButton.addEventListener("click", () => {
+  if (hintsLeft > 0) {
+    if (hintButton.innerHTML === "💡") {
+      // GA4 tracking: hint used
+      gtag("event", "hint_used", {
+        category: currentCategory,
+        difficulty: currentType,
+        question_id: currentQuestionIndex + 1,
+        hints_remaining: hintsLeft - 1,
+      });
+
+      hintsLeft--;
+      isHintOpen = true;
+    }
+
+    popup.textContent = hintsLeft;
+    hintButton.innerHTML = questions[currentQuestionIndex].hint;
+    hintButton.style.fontSize = "14px";
+  }
+
+  if (hintsLeft === 0) {
+    popup.style.background = "gray";
+  }
+
+  saveQuizState(); // <-- save updated state
 });

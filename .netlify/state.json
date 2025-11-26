@@ -1,0 +1,21 @@
+{
+	"siteId": "5f354db9-2cab-4fe9-8c93-1c88149f26c2",
+	"geolocation": {
+		"data": {
+			"city": "Vårsta",
+			"country": {
+				"code": "SE",
+				"name": "Sweden"
+			},
+			"subdivision": {
+				"code": "AB",
+				"name": "Stockholm County"
+			},
+			"timezone": "Europe/Stockholm",
+			"latitude": 59.2484,
+			"longitude": 18.0782,
+			"postalCode": "123 49"
+		},
+		"timestamp": 1764194550774
+	}
+}

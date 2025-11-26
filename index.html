@@ -2,14 +2,18 @@
 <html lang="en">
   <head>
     <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-NHDD5B6QW3"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-NHDD5B6QW3');
-</script>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-NHDD5B6QW3"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-NHDD5B6QW3", {});
+    </script>
 
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -119,7 +123,7 @@
 
     <!--Difficulty/Type selection-->
     <section class="difficulty-screen">
-      <h1>Choose Quiz Type</h1>
+      <h2>Pick Your Challenge! 🎯</h2>
       <div id="difficulty-buttons">
         <!-- Buttons will be added dynamically based on category -->
       </div>
@@ -136,6 +140,7 @@
 
     <!--Quiz container example (should be hidden ?)-->
     <section class="quiz-container">
+      <h2>Let's Go! You Got This! 💪</h2>
       <div id="timer">0</div>
       <div id="question">Question text</div>
       <div class="options">
@@ -143,14 +148,26 @@
         <button class="option">Option 2</button>
         <button class="option">Option 3</button>
       </div>
+      <div class="hint-wrapper">
+        <div class="hint-container">
+          <button id="hintBtn">💡</button>
+
+          <!-- Popup badge -->
+          <div id="hintPopup" class="hint-popup">2</div>
+        </div>
+      </div>
       <button id="quiz-next-btn">Next</button>
       <div id="result" class="hidden">Your score: <span id="score"></span></div>
+      <div id="progress-container">
+        <div id="progress-bar"></div>
+      </div>
+      <p id="progress-text"></p>
       <button id="quit-quiz-btn">Exit Quiz</button>
     </section>
 
     <!--result screen-->
     <section class="result-screen">
-      <h2>Your results 🎉</h2>
+      <h2>Amazing Work! 🎉</h2>
       <p>
         You scored<span id="final-score"></span> out of
         <span id="total-questions"></span>
@@ -160,13 +177,8 @@
       <button id="back-to-categories-btn">Choose another category</button>
     </section>
 
-    <div id="progress-container">
-      <div id="progress-bar"></div>
-    </div>
-    <p id="progress-text"></p>
-
-    <script type="module" src="./js/script.js" defer></script>
-    <script type="module" src="./js/scoring.js" defer></script>
-    <script type="module" src="./js/timers.js" defer></script>
+    <script type="module" src="./js/script.js"></script>
+    <script type="module" src="./js/scoring.js"></script>
+    <script type="module" src="./js/timers.js"></script>
   </main>
 </html>

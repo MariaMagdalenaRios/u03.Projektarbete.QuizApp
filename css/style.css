@@ -1,4 +1,4 @@
-:root{
+:root {
   --primary: #b9adfd;
   --primary-dark: #6d5fa8;
   --accent: #a78bfa;
@@ -17,7 +17,6 @@ body {
   background: linear-gradient(135deg, #f9d3f2, #c4daff, #ffffff);
   background-size: 1200% 1200%;
   animation: gradientMove 20s ease infinite;
-  font-family: Arial, sans-serif;
 }
 
 body::after {
@@ -57,20 +56,19 @@ main {
 }
 
 .hero-title {
-  font-size:clamp(32px,6vw,56px);
-  font-weight:800;
-  margin-bottom:12px;
+  font-size: clamp(32px, 6vw, 56px);
+  font-weight: 800;
+  margin-bottom: 12px;
   background: linear-gradient(200deg, #da3598, #6d1ebdba);
-  -webkit-background-clip:text;
-  -webkit-text-fill-color:transparent;
-  background-clip:text
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
-
 .hero-subtitle {
-  font-size:clamp(16px,2.5vw,20px);
-  color:var(--text-muted);
-  margin-bottom:48px;
+  font-size: clamp(16px, 2.5vw, 20px);
+  color: var(--text-muted);
+  margin-bottom: 48px;
   padding: 0 1rem;
 }
 #start-next-btn {
@@ -86,15 +84,9 @@ main {
   transition: all 0.2s ease;
 }
 
-#start-next-btn:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 24px var(--shadow-lg);
-}
-
 .next-btn-emoji {
   font-size: 28px;
 }
-
 
 .next-btn-name {
   font-weight: 700;
@@ -105,14 +97,12 @@ main {
   max-width: 150px;
   margin: 15px auto;
   display: block;
-
 }
 
-
 #start-next-btn:hover {
-  transform:translateY(-4px);
-  box-shadow:0 8px 24px var(--shadow-lg);
-  border-color:var(--primary);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px var(--shadow-lg);
+  border-color: var(--primary);
 }
 
 .quiz-overview {
@@ -141,14 +131,13 @@ main {
   box-shadow: 0 2px 6px rgba(209, 132, 248, 0.05);
   padding: 24px 28px;
   cursor: pointer;
-  transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
 }
 
 .category-btn:hover {
   background-color: #d0c9f7;
   transform: translateY(-6px);
   box-shadow: 0 8px 24px var(--shadow);
-
 }
 
 .emoji-icon {
@@ -165,10 +154,11 @@ main {
 
 #progress-container {
   width: 100%;
+  max-width: 400px;
+  margin: 15px auto;
   background-color: #e0e0e0;
   border-radius: 10px;
   height: 25px;
-  margin-top: 15px;
 }
 
 #progress-bar {
@@ -182,10 +172,19 @@ main {
   font-family: Arial, sans-serif;
   font-size: 14px;
   margin-top: 5px;
+  text-align: center;
 }
+
 .difficulty-screen {
-  display: none;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  padding-top: 10vh; /* Shifts content slightly up */
 }
+
 .option.correct {
   background-color: #4caf50;
   color: white;
@@ -215,13 +214,13 @@ main {
   display: block;
 }
 .difficulty-screen h1 {
-  font-size:clamp(32px,6vw,56px);
-  font-weight:800;
-  margin-bottom:12px;
+  font-size: clamp(32px, 6vw, 56px);
+  font-weight: 800;
+  margin-bottom: 12px;
   background: linear-gradient(200deg, #d72590, #6d1ebd);
-  -webkit-background-clip:text;
-  -webkit-text-fill-color:transparent;
-  background-clip:text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 /* Tablet: 768px and up */
 @media (min-width: 768px) {
@@ -287,6 +286,7 @@ main {
 
   #progress-container {
     height: 22px;
+    max-width: 450px;
   }
 
   #progress-text {
@@ -344,22 +344,23 @@ main {
 
   #progress-container {
     height: 25px;
+    max-width: 500px;
   }
 }
 
 .start-screen h1 {
-  font-size:clamp(32px,6vw,56px);
-  font-weight:800;
-  margin-bottom:12px;
+  font-size: clamp(32px, 6vw, 56px);
+  font-weight: 800;
+  margin-bottom: 12px;
   background: linear-gradient(200deg, #d72590, #7e2bd2);
-  -webkit-background-clip:text;
-  -webkit-text-fill-color:transparent;
-  background-clip:text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 .start-screen p {
-  font-size:clamp(16px,2.5vw,20px);
-  color:var(--text-muted);
-  margin-bottom:48px;
+  font-size: clamp(16px, 2.5vw, 20px);
+  color: var(--text-muted);
+  margin-bottom: 48px;
 }
 button {
   padding: 12px 22px;
@@ -379,7 +380,7 @@ button {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  gap: 12px; 
+  gap: 12px;
 }
 
 button:hover {
@@ -394,34 +395,34 @@ button:active {
   font-size: clamp(22px, 5vw, 38px);
   font-weight: 700;
   margin-bottom: 20px;
-  padding: 2rem;
+  padding: 1rem;
   color: #9e299e;
   background: rgba(247, 233, 244, 0.3);
   backdrop-filter: blur(5px);
   border-radius: 0px;
 }
 #quiz-next-btn {
+  max-width: 150px;
+  margin: 15px auto;
   display: block;
-  margin: 20px auto;
+  visibility: hidden;
 }
-#quiz-next-btn,
+
 #quit-quiz-btn {
   max-width: 150px;
   margin: 15px auto;
   display: block;
-}  
-
-.options .option {
-  margin: 8px 8px;
 }
+
 .options {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 8px;
   align-items: center;
+  margin-bottom: 10px;
 }
 .option {
-  width: 100%; 
+  width: 100%;
   max-width: 400px;
   padding: 14px 20px;
   font-size: 1rem;
@@ -429,9 +430,9 @@ button:active {
   border-radius: 10px;
 }
 #timer {
-  font-size: 3rem;
+  font-size: 1.5rem;
   font-weight: bold;
-  padding: 2rem;
+  padding: 1rem;
 }
 .result-screen {
   display: flex;
@@ -451,6 +452,7 @@ button:active {
   margin-bottom: 30px;
   color: #333;
 }
+
 
 #ranking-table p {
   font-size: 1rem;
@@ -482,5 +484,45 @@ button:active {
 }
 
   
+.hint-image {
+  height: 1.7rem;
+}
 
+.hint-wrapper {
+  display: flex;
+  justify-content: center;
+  margin: 10px 0;
+}
 
+.hint-container {
+  position: relative;
+  margin: auto;
+}
+
+#hintBtn {
+  background: rgb(123, 117, 158);
+  color: white;
+  padding: 0.4rem;
+  margin: 0.5rem;
+  box-shadow: 10px 10px 5px rgb(133, 139, 141);
+  border-radius: 1rem;
+  font-size: 25px;
+  border: none;
+  cursor: pointer;
+  position: relative;
+}
+
+.hint-popup {
+  position: absolute;
+  top: 2px;
+  right: -8px;
+  background: red;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 50%;
+  font-size: 12px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
