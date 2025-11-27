@@ -31,7 +31,7 @@ export const startTimer = (questionNum) => {
   intervalId = setInterval(() => {
     count++;
 
-    if (count >= 60) {
+    if (count >= 20) {
       stopTimer(questionNum);
       timerElement.textContent = "Game Over!";
       timerElement.style.color = "red";

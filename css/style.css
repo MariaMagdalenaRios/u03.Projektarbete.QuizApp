@@ -453,6 +453,37 @@ button:active {
   color: #333;
 }
 
+
+#ranking-table p {
+  font-size: 1rem;
+  margin: 0px;
+}
+
+
+#ranking-table {
+  max-width: 50em;
+  max-height: 30rem;
+  overflow-y: scroll;
+  margin: auto;
+
+  border: 2px solid;
+  border-image: linear-gradient(45deg, #192e80, #8e1699) 1;
+  border-radius: 20px;
+  padding: 10px;
+}
+
+.ranking-row {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  padding: 10px;
+  border-bottom: 1px solid rgba(0,0,0,0.2); /* thin separator */
+}
+
+.ranking-row:last-child {
+  border-bottom: none;
+}
+
+  
 .hint-image {
   height: 1.7rem;
 }
@@ -494,4 +525,37 @@ button:active {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.user-info {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; /* centers items horizontally */
+  gap: 0.5rem; /* adds spacing between children */
+  height: 80vh;
+  margin: 0 auto; /* remove top 20% margin */
+}
+
+.user-info input,
+.user-info button,
+.user-info label {
+  width: 100%;      /* make them all full width inside the container */
+  max-width: 300px; /* optional max width */
+  box-sizing: border-box;
+}
+
+.user-info label {
+  background-color: #9a86fd15;
+  padding: 0.5rem;
+  border-radius: 2rem;
+}
+
+.user-info input {
+  padding: 0.5rem;
+  border: 2px solid #6d1ebd;
+  border-radius: 1.5rem;
+}
+
+.user-info button {
+  margin-top: 1rem;
 }
