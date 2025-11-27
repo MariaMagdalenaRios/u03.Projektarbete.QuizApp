@@ -315,7 +315,10 @@ async function endQuiz() {
   document.querySelector(".result-screen").style.display = "block";
   document.getElementById("progress-container").style.display = "none";
   document.getElementById("progress-text").style.display = "None";
-
+  const rankingTable = document.getElementById("ranking-table")
+  rankingTable.innerHTML = "<p style='color: white'>Loading ranking table....</p>"
+  rankingTable.style.borderWidth = "0px"
+  
 
 
   const responseSave = await fetch('/.netlify/functions/saveUser', {
@@ -352,10 +355,11 @@ async function endQuiz() {
   localStorage.removeItem("quizState");
 
   const response = await fetch('/.netlify/functions/loadData');
-  const allPlayers = await response.json();
-  allPlayers.sort((a,b) => b.average_score - a.average_score)
+  let allPlayers = await response.json();
+  allPlayers = allPlayers.sort((a,b) => b.average_score - a.average_score).slice(0, 4)
 
-  const rankingTable = document.getElementById("ranking-table")
+  rankingTable.style.borderWidth = "2px"
+
   rankingTable.innerHTML = `
     <div class="ranking-row" >
       <p><b>Place</b></p>
