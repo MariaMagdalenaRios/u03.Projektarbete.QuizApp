@@ -8,7 +8,7 @@
 - Negar Baharmand
 - Hugo Oblak
 
-🔗 **Live Demo:** [https://u03quizproject.netlify.app/](https://u03quizproject.netlify.app/)
+🔗 **Live Demo:** [https://guessymessy.netlify.app/](https://guessymessy.netlify.app/)
 
 ## About the Project
 
